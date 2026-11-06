@@ -1,0 +1,902 @@
+/**
+ * GrainMaster Agro Solutions Ltd. (RC9167936)
+ * Kano, Nigeria
+ * Product Database & Technical Specifications
+ */
+
+const PRODUCTS_DATA = [
+  // --- SECTION 1: RICE MILLING MACHINES & WHITENERS ---
+  {
+    id: "n70-polisher",
+    name: "N-70 Combined Rice Polisher & Huller Machine",
+    category: "rice-machines",
+    categoryName: "Rice Milling Machines",
+    brand: "N-Series Heavy Duty",
+    sku: "GM-N70-PLSH",
+    price: 1850000,
+    priceFormatted: "₦1,850,000",
+    image: "assets/images/products/n70-rice-polisher.jpg",
+    badge: "Popular Commercial",
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 38,
+    shortDesc: "Workhorse commercial rice huller and friction polisher featuring a heavy-duty cast-iron chamber, adjustable pressure plate, and built-in husk suction blower.",
+    highlights: [
+      "Capacity: 800 - 1,200 kg/hour (paddy to polished rice)",
+      "Required Power: 11 - 15 kW (15 - 20 HP 3-Phase or 18HP Diesel)",
+      "Complete with slotted iron roller, hexagonal screen, and suction fan",
+      "Robust cast iron body engineered for continuous 24/7 milling in Kano"
+    ],
+    specs: {
+      "Model Series": "N-70 Industrial Heavy-Duty",
+      "Milling Capacity": "850 - 1,200 kg/h paddy",
+      "Main Shaft Speed": "850 - 1,050 RPM",
+      "Power Requirement": "11 - 15 kW (15 - 20 HP electric motor or 18-22 HP diesel)",
+      "Standard Screen Size": "Hexagonal perforated screen (1.0 mm - 1.2 mm slots)",
+      "Roller Type": "Milled high-friction cast iron slotted roller",
+      "Weight": "Approx. 240 kg (without motor)",
+      "Dimensions (L×W×H)": "1,150 × 680 × 1,320 mm",
+      "Origin / Quality": "High-Grade Cast Alloy, Precision Machined OEM Standard",
+      "Warranty": "12 Months Structural Warranty"
+    },
+    applications: "Widely used across commercial rice mills in Kano, Kebbi, Kaduna, and Niger states for single-pass hulling and silky bran polishing.",
+    compatibility: "Standard N-70 hexagonal screens, N-70 iron rollers, 6-inch / 8-inch intake chutes, and 4-groove B-section pulleys."
+  },
+  {
+    id: "n120-polisher",
+    name: "N-120 High-Capacity Commercial Rice Polisher",
+    category: "rice-machines",
+    categoryName: "Rice Milling Machines",
+    brand: "N-Series Heavy Duty",
+    sku: "GM-N120-PLSH",
+    price: 2750000,
+    priceFormatted: "₦2,750,000",
+    image: "assets/images/products/n120-rice-polisher.jpg",
+    badge: "High Capacity",
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 42,
+    shortDesc: "Heavy-duty commercial rice polisher designed for large-scale milling facilities demanding minimal grain breakage and exceptional head rice recovery.",
+    highlights: [
+      "Capacity: 1,500 - 2,200 kg/hour head rice output",
+      "Power Requirement: 18.5 - 22 kW (25 - 30 HP)",
+      "Dual air-jet cooling channels reduce grain chamber temperature",
+      "Hardened chrome alloy iron roller for extended wear life"
+    ],
+    specs: {
+      "Model Series": "N-120 High Output Commercial",
+      "Milling Capacity": "1,500 - 2,200 kg/h",
+      "Main Shaft Speed": "850 - 950 RPM",
+      "Power Requirement": "18.5 - 22 kW (25 - 30 HP)",
+      "Air Suction Volume": "2,400 m³/h integrated blower",
+      "Screen Fitment": "N-120 Extra-wide Hexagonal Stainless/Hardened Screen",
+      "Weight": "Approx. 390 kg",
+      "Dimensions (L×W×H)": "1,380 × 820 × 1,480 mm",
+      "Discharge Type": "Dual weight-lever counterbalanced pressure gates",
+      "Warranty": "12 Months Warranty"
+    },
+    applications: "High-volume commercial processing plants seeking premium white rice output with low broken rice percentage.",
+    compatibility: "Direct fit for N-120 screens, N-120 iron rollers, and large diameter aspirator ducts."
+  },
+  {
+    id: "buhler-topwhite-bspb",
+    name: "Bühler TopWhite™ Vertical Rice Whitener BSPB",
+    category: "rice-machines",
+    categoryName: "Rice Milling Machines",
+    brand: "Bühler Compatible OEM",
+    sku: "GM-BHL-BSPB",
+    price: 18500000,
+    priceFormatted: "₦18,500,000",
+    image: "assets/images/products/buhler-topwhite-bspb.png",
+    badge: "Industrial Gold Standard",
+    inStock: true,
+    rating: 5.0,
+    reviewsCount: 29,
+    shortDesc: "The pinnacle of industrial abrasive rice whitening. Uses top-to-bottom vertical gravity grain flow with silicon carbide abrasive rings for maximum head rice yield.",
+    highlights: [
+      "Milling Capacity: 4.0 - 7.0 Tons/hour continuous processing",
+      "Vertical abrasive technology ensures gentle, uniform bran removal",
+      "Precision cool air aspiration minimizes thermal stress on kernels",
+      "Hinged full-access doors allow rapid replacement of BSPB screen segments"
+    ],
+    specs: {
+      "Model": "TopWhite BSPB-1 / BSPB-2 Spec",
+      "Capacity": "4,000 - 7,000 kg/h brown rice",
+      "Drive Motor": "37 - 45 kW (50 - 60 HP) 1450 RPM",
+      "Abrasive System": "5-segment Stacked Silicon Carbide Emery Rings",
+      "Screen Type": "BSPB Stainless Steel 304 Slotted Screen Panels",
+      "Aspiration Air Required": "45 - 55 m³/min at -1,500 Pa",
+      "Machine Weight": "Approx. 1,650 kg",
+      "Dimensions (L×W×H)": "1,450 × 1,320 × 2,250 mm",
+      "Yield Advantage": "Reduces broken grains by up to 1.8% compared to horizontal whiteners",
+      "Warranty": "24 Months Manufacturer Warranty"
+    },
+    applications: "Industrial automated rice processing lines producing Grade-1 parboiled or raw polished white rice for national distribution.",
+    compatibility: "Utilizes genuine Bühler BSPB screens, silicon carbide emery rings #24-#36, and OEM resistance brake bars."
+  },
+  {
+    id: "buhler-drpa-polisher",
+    name: "Bühler DRPA HighPoly™ Silky Water Mist Rice Polisher",
+    category: "rice-machines",
+    categoryName: "Rice Milling Machines",
+    brand: "Bühler Compatible OEM",
+    sku: "GM-BHL-DRPA",
+    price: 16800000,
+    priceFormatted: "₦16,800,000",
+    image: "assets/images/products/buhler-drpa-polisher.jpg",
+    badge: "Silky Glass Finish",
+    inStock: true,
+    rating: 5.0,
+    reviewsCount: 24,
+    shortDesc: "Advanced friction mist polisher that cleans residual bran dust and gives milled rice grains a smooth, crystal-clear, lustrous silky surface with extended shelf life.",
+    highlights: [
+      "Capacity: 3.5 - 6.0 Tons/hour",
+      "Micro-mist water atomization with temperature-controlled air flow",
+      "Multi-zone stainless steel DRPA slotted polishing screen",
+      "Significantly reduces bran adhesion to prevent rancidity in storage"
+    ],
+    specs: {
+      "Model": "DRPA-D HighPoly Series",
+      "Capacity Range": "3,500 - 6,000 kg/h",
+      "Motor Power": "30 - 37 kW (40 - 50 HP)",
+      "Water Addition Rate": "0.05% - 0.20% by weight (fine atomized mist)",
+      "Polishing Drum": "Hardened chrome slotted friction roller with air channels",
+      "Polishing Screens": "Precision-etched SS304 DRPA silky screens",
+      "Net Weight": "Approx. 1,480 kg",
+      "Aspiration Requirement": "35 - 45 m³/min",
+      "Grain Temperature Rise": "< 2.5°C",
+      "Warranty": "24 Months Warranty"
+    },
+    applications: "Finishing line for export-grade rice, long grain parboiled rice, and premium packaged rice brands.",
+    compatibility: "Fully compatible with Bühler DRPA-D, DRPA-E, and SuperPoly components."
+  },
+  {
+    id: "satake-vta-whitener",
+    name: "Satake VTA Vertical Abrasive Rice Whitener",
+    category: "rice-machines",
+    categoryName: "Rice Milling Machines",
+    brand: "Satake Japan Style",
+    sku: "GM-STK-VTA",
+    price: 15500000,
+    priceFormatted: "₦15,500,000",
+    image: "assets/images/products/satake-vta-whitener.jpg",
+    badge: "High Yield Japan Tech",
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 31,
+    shortDesc: "World-renowned Satake-type vertical whitener engineered with high-efficiency abrasive stones and multi-point air induction for cool, high-yield milling.",
+    highlights: [
+      "Capacity: 4.0 - 6.5 Tons/hour",
+      "Unique hollow-shaft air distribution keeps kernels cool during milling",
+      "Vertical gravity feed avoids cross-chamber grain crushing",
+      "Quick-change modular screen segments minimize downtime"
+    ],
+    specs: {
+      "Model": "VTA-5 / VTA-10 Design",
+      "Output Capacity": "4,000 - 6,500 kg/h",
+      "Motor Rating": "37 kW (50 HP) 3-Phase 400V/50Hz",
+      "Rotor Speed": "900 - 1,100 RPM variable pulley",
+      "Chamber Design": "3-stage silicon carbide abrasive wheel assembly",
+      "Screen Construction": "Laser cut SS304 screens with hardened wear bars",
+      "Machine Dimensions": "1,380 × 1,250 × 2,180 mm",
+      "Total Weight": "1,520 kg",
+      "Warranty": "18 Months Warranty"
+    },
+    applications: "Medium to large rice mills operating high-throughput milling lines.",
+    compatibility: "Satake VTA5, VTA10, and compatible aftermarket abrasive assemblies."
+  },
+  {
+    id: "satake-kb40-polisher",
+    name: "Satake KB40 Commercial Rice Polishing Machine",
+    category: "rice-machines",
+    categoryName: "Rice Milling Machines",
+    brand: "Satake Japan Style",
+    sku: "GM-STK-KB40",
+    price: 14200000,
+    priceFormatted: "₦14,200,000",
+    image: "assets/images/products/satake-kb40-polisher.jpg",
+    badge: "Premium Polish",
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 19,
+    shortDesc: "High-performance water mist rice polisher utilizing controlled friction and humidified air to produce shining, dust-free, non-stick rice grains.",
+    highlights: [
+      "Capacity: 3.0 - 4.5 Tons/hour",
+      "Integrated precision peristaltic water metering pump",
+      "Stainless steel polishing chamber prevents contamination",
+      "Produces clean, silky rice that commands top market prices in Kano"
+    ],
+    specs: {
+      "Model": "KB40-G Series",
+      "Capacity": "3,000 - 4,500 kg/h",
+      "Motor Power": "30 kW (40 HP)",
+      "Water Supply": "Clean potable water 0.5 - 2.0 bar, 5 - 15 L/h",
+      "Chamber Assembly": "High chromium alloy friction drum + SS screen sieves",
+      "Air Flow": "30 m³/min negative pressure bran aspiration",
+      "Dimensions": "1,980 × 850 × 1,750 mm",
+      "Weight": "1,180 kg",
+      "Warranty": "18 Months Structural Warranty"
+    },
+    applications: "Finishing stage for high-end packaged rice brands where appearance and shine are paramount.",
+    compatibility: "Satake KB40, KB40-G, and equivalent water injection polishing systems."
+  },
+
+  // --- SECTION 2: OPTICAL COLOR SORTER MACHINES & SPARES ---
+  {
+    id: "rice-color-sorter-5chute",
+    name: "AI Multi-Chute RGB CCD Rice Color Sorter Machine",
+    category: "color-sorter",
+    categoryName: "Color Sorters & Spares",
+    brand: "GrainMaster OptoTech",
+    sku: "GM-CS-5CH",
+    price: 24500000,
+    priceFormatted: "₦24,500,000",
+    image: "assets/images/products/rice-color-sorter.jpg",
+    badge: "State of the Art",
+    inStock: true,
+    rating: 5.0,
+    reviewsCount: 18,
+    shortDesc: "Ultra-high-definition optical rice color sorter equipped with 5400-pixel RGB full-color CCD cameras, deep-learning sorting algorithms, and high-speed ejectors.",
+    highlights: [
+      "Capacity: 3.5 - 7.0 Tons/hour (Configurable 3 to 7 chutes)",
+      "Sorts black specks, yellow/chalky grains, peck, glass, stone, and plastic",
+      "Sorting Accuracy: ≥ 99.99% with minimal good grain carryover (<1:1)",
+      "Complete with Japanese SMC pneumatic filters, LED lights, and Linux touch panel"
+    ],
+    specs: {
+      "Chute Configuration": "3 to 5 Chutes (64 channels per chute, total 320 channels)",
+      "Sorting Accuracy": "≥ 99.99%",
+      "Ejector Technology": "High-frequency micro-solenoid valves (≥ 1,200 Hz)",
+      "Camera Sensor": "5,400 Pixel True Color RGB CCD with Toshiba lenses",
+      "Lighting System": "Dual-spectrum cold LED lighting (100,000 hours lifespan)",
+      "Operating Air Pressure": "0.6 - 0.8 MPa (6 - 8 bar dry filtered air)",
+      "Air Consumption": "< 2.0 m³/min (depending on reject rate)",
+      "Power Rating": "2.5 - 3.8 kW 220V Single-Phase",
+      "Dimensions (L×W×H)": "2,150 × 1,550 × 1,850 mm",
+      "Weight": "1,250 kg",
+      "Warranty": "24 Months On-site Warranty & Technical Support in Kano"
+    },
+    applications: "Essential sorting unit for eliminating discolored kernels, black tip, chalky grains, and foreign matter to produce Grade-1 polished rice.",
+    compatibility: "Modular chutes accommodate long grain, short grain, basmati, and parboiled rice varieties."
+  },
+  {
+    id: "color-sorter-ejector",
+    name: "High-Frequency Color Sorter Micro Solenoid Ejector Valve",
+    category: "color-sorter",
+    categoryName: "Color Sorters & Spares",
+    brand: "Matrix / SMC High Speed",
+    sku: "GM-CS-EJCT-1200",
+    price: 45000,
+    priceFormatted: "₦45,000",
+    image: "assets/images/products/color-sorter-ejector.jpg",
+    badge: "High Precision",
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 86,
+    shortDesc: "Genuine high-frequency micro-solenoid ejector valve capable of firing over 1,200 times per second with a lifespan exceeding 10 billion cycles.",
+    highlights: [
+      "Ultra-fast response time: ≤ 0.8 milliseconds",
+      "Operating Frequency: Up to 1,200 Hz continuous high-speed ejection",
+      "High-purity tungsten alloy seat resists wear and air erosion",
+      "Direct replacement for popular color sorter brands in Kano"
+    ],
+    specs: {
+      "Operating Voltage": "24V DC pulse driven",
+      "Operating Air Pressure": "0.2 - 0.8 MPa",
+      "Response Time": "0.8 ms opening / 1.0 ms closing",
+      "Service Life": "≥ 10,000,000,000 cycles (10 Billion+ hits)",
+      "Nozzle Diameter": "2.0 mm / 2.5 mm precision orifice",
+      "Body Material": "Anodized Aerospace Aluminum with Hardened Alloy Core",
+      "Coil Insulation": "Class H (180°C heat resistant)",
+      "Mounting Pitch": "Standard multi-valve manifold block"
+    },
+    applications: "Replacement valve for failed or leaking ejectors on optical rice and grain sorting machines.",
+    compatibility: "Fits GrainMaster, Meyer, Anysort, Taiho, Buhler Sortex compatible manifolds, and AMD color sorters."
+  },
+  {
+    id: "color-sorter-regulator",
+    name: "Color Sorter Air Compressor Precision Filter & Pressure Regulator",
+    category: "color-sorter",
+    categoryName: "Color Sorters & Spares",
+    brand: "SMC Type Pneumatics",
+    sku: "GM-CS-REG-FRL",
+    price: 185000,
+    priceFormatted: "₦185,000",
+    image: "assets/images/products/color-sorter-regulator.jpg",
+    badge: "Pneumatic Protection",
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 47,
+    shortDesc: "High-precision 3-stage air filtration and pressure regulating station (0.01 micron) that protects sensitive color sorter ejector valves from oil, moisture, and dust.",
+    highlights: [
+      "3-Stage Filtration: Water separator, 5µm filter, and 0.01µm coalescing oil filter",
+      "Guarantees Class 1 ISO 8573 clean air to prevent ejector clogging",
+      "Precision diaphragm regulator with lockable pressure adjustment dial",
+      "Auto-drain valve expels condensed moisture automatically"
+    ],
+    specs: {
+      "Max Operating Pressure": "1.0 MPa (10 bar / 145 PSI)",
+      "Regulated Pressure Range": "0.05 - 0.85 MPa (0.5 - 8.5 bar)",
+      "Port Size": "1-inch / 3/4-inch BSP female thread",
+      "Filtration Rating": "Stage 1: 5 micron | Stage 2: 0.3 micron | Stage 3: 0.01 micron",
+      "Oil Removal Efficiency": "Down to 0.003 mg/m³",
+      "Bowl Material": "Polycarbonate with Heavy Steel Protective Guard",
+      "Drain Mechanism": "Float-type Auto-Drain",
+      "Operating Temperature": "5 - 60°C"
+    },
+    applications: "Must-have pneumatic station installed between the screw air compressor / air dryer and the optical color sorter machine.",
+    compatibility: "Universal fit for all 2-chute, 3-chute, 4-chute, 5-chute, and 7-chute color sorters."
+  },
+  {
+    id: "color-sorter-chute",
+    name: "Hard Anodized Low-Friction Color Sorter Aluminum Chute",
+    category: "color-sorter",
+    categoryName: "Color Sorters & Spares",
+    brand: "OptoTech OEM",
+    sku: "GM-CS-CHUTE-64",
+    price: 320000,
+    priceFormatted: "₦320,000",
+    image: "assets/images/products/color-sorter-chute.jpg",
+    badge: "OEM Spare",
+    inStock: true,
+    rating: 4.8,
+    reviewsCount: 16,
+    shortDesc: "Micro-grooved 64-channel anodized aluminum guide chute that aligns rice grains in single-file orientation for flawless optical inspection and ejection.",
+    highlights: [
+      "64 precision machined U-grooves for uniform grain alignment",
+      "Hard anodic oxidation surface treatment (Rockwell hardness > HV400)",
+      "Integrated electric heating strip prevents condensation and dust sticking",
+      "Mirror-smooth finish minimizes kernel tumbling for pinpoint ejector accuracy"
+    ],
+    specs: {
+      "Channel Count": "64 Channels (V-groove / U-groove for rice)",
+      "Material": "6061-T6 High-grade Aviation Aluminum",
+      "Surface Finish": "Electroless Hard Anodizing (thickness 50µm)",
+      "Heating Element": "Embedded 220V 150W silicone heating blanket",
+      "Length": "Standard 300 mm optical channel width",
+      "Wear Resistance": "> 5 Years under continuous commercial grain flow"
+    },
+    applications: "Replacing worn, scratched, or corroded chutes that cause grain bouncing and false optical detection.",
+    compatibility: "Direct fit for standard 64-channel chute optical sorter assemblies."
+  },
+
+  // --- SECTION 3: MILLING ROLLERS & ABRASIVES ---
+  {
+    id: "rubber-roller-paddy",
+    name: "Heavy-Duty Paddy Dehusker Rubber Rollers (6\", 8\", 10\", 14\")",
+    category: "rollers-abrasives",
+    categoryName: "Rollers & Abrasives",
+    brand: "BANDO / GrainMaster Elite",
+    sku: "GM-RR-10IN",
+    price: 65000,
+    priceFormatted: "₦65,000",
+    image: "assets/images/products/rubber-roller-paddy.jpg",
+    badge: "High Wear Resistance",
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 112,
+    shortDesc: "Premium cast-iron core rubber rollers formulated with high-grade synthetic nitrile rubber for exceptional shelling rate (≥95%), minimal grain cracking, and long wear life.",
+    highlights: [
+      "Available Sizes: 6-inch, 8-inch, 10-inch, and 14-inch diameter",
+      "Dehusking Efficiency: Over 90 - 95% shelling rate in single pass",
+      "Optimized Rubber Shore Hardness: 90° - 95° Shore A for parboiled & raw paddy",
+      "Dynamic balance tested to eliminate shaft vibration and bearing wear"
+    ],
+    specs: {
+      "Standard Diameters": "10-inch (254mm) × 10-inch (254mm) width / 6\", 8\", 14\"",
+      "Core Material": "Heavy Cast Iron with precision keyed bore",
+      "Rubber Compound": "High Nitrile Synthetic Polymer with Carbon Reinforcement",
+      "Shore Hardness": "92° ± 2° Shore A (High temperature stability)",
+      "Tensile Strength": "≥ 20 MPa",
+      "Abrasion Loss": "< 0.06 cm³ / 1.61 km",
+      "Processing Longevity": "Dehusks 120 - 180 Tons of parboiled paddy per pair",
+      "Unit Packing": "Packaged in pairs with protective UV wrap"
+    },
+    applications: "Primary husking unit installed in all commercial rubber roll hullers (Satake, Yanmar, Bühler, and Indian paddy dehuskers).",
+    compatibility: "Universal fit for all standard 6\", 8\", 10\", and 14\" rubber roll paddy dehusking machines."
+  },
+  {
+    id: "emery-roller-whitener",
+    name: "Silicon Carbide Emery Roller Stones for Rice Whiteners",
+    category: "rollers-abrasives",
+    categoryName: "Rollers & Abrasives",
+    brand: "GrainMaster Abrasives",
+    sku: "GM-EMR-24G",
+    price: 185000,
+    priceFormatted: "₦185,000",
+    image: "assets/images/products/emery-roller-whitener.jpg",
+    badge: "High Durability",
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 64,
+    shortDesc: "Precision-molded silicon carbide abrasive stones engineered for vertical and horizontal rice whiteners to deliver rapid bran peeling with lowest grain breakage.",
+    highlights: [
+      "Available Grit Sizes: #24, #30, #36, #46 (Coarse to fine abrasive)",
+      "High thermal conductivity dissipates milling heat rapidly",
+      "Uniform grain porosity prevents glazing and premature wear",
+      "Dynamically balanced for smooth running at speeds up to 1,200 RPM"
+    ],
+    specs: {
+      "Abrasive Material": "Green & Black Silicon Carbide (SiC) Grain",
+      "Bonding Agent": "Resinoid / Ceramic vitrified high-strength matrix",
+      "Grit Options": "Grit 24 (Hard/Parboiled paddy) | Grit 30-36 (White rice)",
+      "Dimensions": "Outer Dia 250 - 320 mm × Height 100 - 150 mm × Bore 120 mm",
+      "Operating Peripheral Speed": "18 - 25 m/s",
+      "Milling Life": "300 - 500 Tons of processed rice per stone set",
+      "Static & Dynamic Balance": "G2.5 precision balanced"
+    },
+    applications: "Vertical whiteners (Bühler BSPB, Satake VTA) and horizontal abrasive rice peeling machines.",
+    compatibility: "Available in custom and standard keyway bores for Bühler, Satake, and Chinese vertical whiteners."
+  },
+  {
+    id: "iron-roller-polisher",
+    name: "Hardened Slotted Milled Iron Rollers for Rice Polishers",
+    category: "rollers-abrasives",
+    categoryName: "Rollers & Abrasives",
+    brand: "N-Series / Friction Grade",
+    sku: "GM-IR-N70",
+    price: 95000,
+    priceFormatted: "₦95,000",
+    image: "assets/images/products/iron-roller-polisher.jpg",
+    badge: "Chilled Alloy Cast",
+    inStock: true,
+    rating: 4.8,
+    reviewsCount: 77,
+    shortDesc: "Chilled cast-alloy slotted friction roller machined with helical bran flutes to generate optimal friction against rice grains without scoring or breakage.",
+    highlights: [
+      "Cast with high-chromium chilled iron alloy (Hardness HRC 58-62)",
+      "Machined helical flutes ensure even grain distribution along the chamber",
+      "Internal air cooling vents align with hollow machine drive shafts",
+      "Direct fit for N-70, N-110, and N-120 rice polishing machines"
+    ],
+    specs: {
+      "Material": "Chilled Alloy Cast Iron with Chrome Additive",
+      "Surface Hardness": "HRC 58 - 62 (wear layer depth 8 - 12 mm)",
+      "Models Available": "N-70 (Standard), N-110, N-120 (Extra-long)",
+      "Flute Pattern": "Multi-ribbed spiral friction flutes",
+      "Keyway": "Precision broached shaft keyway (standard metric)",
+      "Average Life": "Over 800 - 1,200 operating hours in parboiled milling"
+    },
+    applications: "Frictional whitening and silky polishing inside N-Series and horizontal friction polishers.",
+    compatibility: "Guaranteed drop-in replacement for N-70, N-90, N-110, and N-120 polishers."
+  },
+
+  // --- SECTION 4: SCREENS & SIEVES ---
+  {
+    id: "bspb-screen",
+    name: "Bühler TopWhite™ BSPB Rice Whitener Screen Segments",
+    category: "screens-sieves",
+    categoryName: "Screens & Sieves",
+    brand: "Bühler Compatible OEM",
+    sku: "GM-SCR-BSPB-SS",
+    price: 145000,
+    priceFormatted: "₦145,000",
+    image: "assets/images/products/bspb-screen.jpg",
+    badge: "OEM Grade SS304",
+    inStock: true,
+    rating: 5.0,
+    reviewsCount: 53,
+    shortDesc: "High-grade SS304 perforated vertical whitener screens designed with specialized tapered slots to discharge bran smoothly without clogging or grain leakage.",
+    highlights: [
+      "Material: High-strength Stainless Steel SS304 or Hardened Alloy Steel",
+      "Slot Widths: 0.8 mm, 0.9 mm, 1.0 mm, 1.1 mm, 1.2 mm",
+      "Laser-cut tapered perforations prevent bran blinding under continuous pressure",
+      "Precision curved radius fits Bühler TopWhite BSPB screen frames seamlessly"
+    ],
+    specs: {
+      "Machine Application": "Bühler TopWhite BSPB-1, BSPB-2, BSPB-3",
+      "Material Thickness": "1.5 mm - 2.0 mm heavy-gauge stainless steel",
+      "Slot Dimensions": "0.9 mm × 15 mm / 1.0 mm × 15 mm tapered slots",
+      "Corrosion Resistance": "100% Rust-proof SS304 suitable for parboiled rice",
+      "Frame Reinforcement": "Folded edges with reinforced clamping zones",
+      "Quantity Per Set": "Sold individually or as complete 3-segment sets"
+    },
+    applications: "Vertical abrasive rice whitening lines demanding high bran extraction efficiency and zero rust staining on white rice.",
+    compatibility: "Exact match for Bühler TopWhite BSPB series screen holders."
+  },
+  {
+    id: "drpa-screen",
+    name: "Bühler DRPA HighPoly™ Silky Polishing Screen Segments",
+    category: "screens-sieves",
+    categoryName: "Screens & Sieves",
+    brand: "Bühler Compatible OEM",
+    sku: "GM-SCR-DRPA-SS",
+    price: 165000,
+    priceFormatted: "₦165,000",
+    image: "assets/images/products/drpa-screen.jpg",
+    badge: "Silky Screen",
+    inStock: true,
+    rating: 5.0,
+    reviewsCount: 39,
+    shortDesc: "Precision stainless steel silky polishing screen engineered specifically for Bühler DRPA friction mist polishers to produce clean, mirror-gloss white rice.",
+    highlights: [
+      "Perforated micro-slots separate fine bran flour without scratching kernel polish",
+      "Manufactured from wear-hardened SS304 sheet for long operating cycles",
+      "Smooth internal surface profile reduces friction heat and prevents broken rice",
+      "Reinforced border flanges ensure zero grain bypass during operation"
+    ],
+    specs: {
+      "Machine Fitment": "Bühler DRPA, DRPA-D, DRPA-E HighPoly Series",
+      "Perforation Type": "Staggered slotted pattern (0.75 mm - 1.10 mm)",
+      "Plate Gauge": "1.8 mm Heavy Duty SS304",
+      "Surface Treatment": "Electropolished internal face",
+      "Working Temperature": "Resistant to hot water mist atomization (up to 90°C)",
+      "Set Configuration": "Half-cylinder segments"
+    },
+    applications: "Water mist finishing polisher stages in modern parboiled rice mills.",
+    compatibility: "Direct replacement for Bühler DRPA and SuperPoly screen drums."
+  },
+  {
+    id: "n-series-screen",
+    name: "N-Series Hexagonal Rice Milling Screens (N-70, N-110, N-120)",
+    category: "screens-sieves",
+    categoryName: "Screens & Sieves",
+    brand: "N-Series Spares",
+    sku: "GM-SCR-HEX-N70",
+    price: 32000,
+    priceFormatted: "₦32,000",
+    image: "assets/images/products/n-series-screen.png",
+    badge: "Bestseller Kano",
+    inStock: true,
+    rating: 4.8,
+    reviewsCount: 148,
+    shortDesc: "Heavy-duty hexagonal perforated rice mill screens manufactured from high-carbon manganese steel to deliver high bran passage and maximum resistance to wear.",
+    highlights: [
+      "Available for N-70, N-90, N-110, and N-120 huller/polisher bodies",
+      "Hardened 65Mn spring steel outlasts ordinary mild steel screens 3-to-1",
+      "Precision hexagonal bend geometry ensures snug fit without frame rattling",
+      "Optimized slot spacing keeps rice whole while expelling coarse and fine bran"
+    ],
+    specs: {
+      "Sizes Available": "N-70 (Standard), N-110, N-120 (Extended Length)",
+      "Material": "65Mn High Carbon Spring Steel / Heat Treated 45# Steel",
+      "Sheet Thickness": "1.2 mm - 1.5 mm",
+      "Slot Width": "1.0 mm, 1.1 mm, 1.2 mm (Parboiled / Raw Paddy specs)",
+      "Form Factor": "2-piece semi-hexagonal clamped assembly",
+      "Tensile Strength": "> 750 MPa"
+    },
+    applications: "Primary wear screen for thousands of N-70 and N-120 rice milling machines in Kano and Northern Nigerian milling clusters.",
+    compatibility: "Guaranteed fit on all standard N-Series cast iron bottom screen cradles."
+  },
+  {
+    id: "pressure-plates-brake",
+    name: "Heavy-Duty Resistance Pressure Plates & Brake Bars",
+    category: "screens-sieves",
+    categoryName: "Screens & Sieves",
+    brand: "GrainMaster Industrial",
+    sku: "GM-BRK-PLT",
+    price: 28000,
+    priceFormatted: "₦28,000",
+    image: "assets/images/products/pressure-plates-brake.jpg",
+    badge: "Wear Hardened",
+    inStock: true,
+    rating: 4.8,
+    reviewsCount: 65,
+    shortDesc: "Hardened steel resistance brake plates and pressure bars that regulate internal milling chamber pressure for uniform whitening and maximum bran removal.",
+    highlights: [
+      "Made from wear-resistant high-alloy tool steel (HRC 55+)",
+      "Prevents uneven grain flow and hot spots inside the whitening chamber",
+      "Available for Bühler whiteners, Satake whiteners, and N-Series machines",
+      "Smooth chamfered edge prevents chipping of parboiled rice kernels"
+    ],
+    specs: {
+      "Material": "Heat-treated Cr12MoV / High Alloy Carbon Steel",
+      "Hardness": "HRC 54 - 58",
+      "Types Available": "Bühler BSPB Brake Bar, Satake VTA Resistance Plate, N-70 Pressure Blade",
+      "Adjustment": "Slotted mounting holes for fine micro-gap clearance adjustment",
+      "Weight": "Approx. 1.8 - 3.2 kg depending on model"
+    },
+    applications: "Maintaining constant milling chamber backpressure to achieve consistent whiteness degrees across grain batches.",
+    compatibility: "Direct fit for Bühler BSPB, DRPA, Satake VTA, and N-Series pressure brackets."
+  },
+
+  // --- SECTION 5: ELEVATOR & TRANSMISSION HARDWARE ---
+  {
+    id: "elevator-cups-hdpe",
+    name: "Heavy-Duty HDPE & Nylon Grain Elevator Buckets / Cups",
+    category: "elevator-hardware",
+    categoryName: "Elevator & Transmission",
+    brand: "GrainMaster TigerCup",
+    sku: "GM-ELV-HDPE",
+    price: 3500,
+    priceFormatted: "₦3,500",
+    image: "assets/images/products/elevator-cups-hdpe.jpg",
+    badge: "Food Grade Polymer",
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 135,
+    shortDesc: "Ultra-durable, high-density polyethylene (HDPE) and virgin nylon elevator cups engineered with thick wear lips for high-capacity vertical grain transport.",
+    highlights: [
+      "Virgin Food-Grade HDPE material resists cracking, chipping, and static buildup",
+      "Deep-bottom design maximizes volumetric fill (up to 110% water level capacity)",
+      "Available sizes from 4\" × 3\" up to 16\" × 8\" for high-capacity bucket elevators",
+      "Gentle grain handling eliminates kernel shattering during discharge"
+    ],
+    specs: {
+      "Sizes in Stock": "6×4, 8×5, 9×6, 10×6, 11×6, 12×7, 14×8, 16×8 inches",
+      "Polymer Types": "HDPE (Virgin High Density Polyethylene) or Super-Nylon",
+      "Operating Temperature": "-40°C to +80°C continuous",
+      "Lip Reinforcement": "Triple-thick front lip resists abrasive scooping wear",
+      "Mounting Holes": "Standard Euro / DIN pattern (pre-drilled or custom)",
+      "Drop & Impact Test": "Unbreakable at high elevation bucket speeds"
+    },
+    applications: "Bucket elevators moving paddy, parboiled rice, white rice, maize, soybeans, and grain husks.",
+    compatibility: "Mounts on rubber elevator belts or PVC grain belts using standard elevator bolts."
+  },
+  {
+    id: "elevator-bolts-nuts",
+    name: "Elevator Bucket Bolts & Nuts (Fang & Euro Flat Oval Head)",
+    category: "elevator-hardware",
+    categoryName: "Elevator & Transmission",
+    brand: "Grade 8.8 High Tensile",
+    sku: "GM-ELV-BLT-SET",
+    price: 1200,
+    priceFormatted: "₦1,200",
+    image: "assets/images/products/elevator-bolts-nuts.jpg",
+    badge: "Pack of 10 Sets",
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 94,
+    shortDesc: "High-tensile Grade 8.8 elevator bucket bolts featuring twin-fang or flat oval countersunk heads, complete with large concave washers and self-locking nyloc nuts.",
+    highlights: [
+      "Twin fang prongs bite securely into the belt to prevent bolt spinning during tightening",
+      "Grade 8.8 zinc-plated high-tensile steel resists belt pulley shearing forces",
+      "Includes wide concave washer that cushions the belt surface against pull-through",
+      "Available in M6, M8, M10, M12 sizes with lengths from 25mm to 60mm"
+    ],
+    specs: {
+      "Bolt Types": "Fang Bolts (Twin-Prong) / Euro Oval Countersunk Bolts",
+      "Material Grade": "High-Tensile Carbon Steel Grade 8.8, Zinc Plated (Corrosion Resistant)",
+      "Standard Thread": "M8 × 30 mm, M8 × 35 mm, M10 × 40 mm, M10 × 50 mm",
+      "Nut Type": "DIN 985 Self-Locking Nyloc Nut or Flange Hex Nut",
+      "Washer Included": "Heavy-duty concave dished washer (30mm OD)",
+      "Packing": "Sold in packs of 10 complete assemblies or wholesale boxes of 100"
+    },
+    applications: "Fastening HDPE, nylon, or steel elevator buckets firmly to transmission conveyor belts without loosening.",
+    compatibility: "Standard hole pitches on all rubber and PVC elevator belt lines."
+  },
+  {
+    id: "centrifugal-suction-fan",
+    name: "Industrial Centrifugal Suction Fan & Husk Aspiration Blower",
+    category: "elevator-hardware",
+    categoryName: "Elevator & Transmission",
+    brand: "GrainMaster AeroTech",
+    sku: "GM-FAN-BLW-5HP",
+    price: 480000,
+    priceFormatted: "₦480,000",
+    image: "assets/images/products/centrifugal-suction-fan.jpg",
+    badge: "Heavy Air Flow",
+    inStock: true,
+    rating: 4.8,
+    reviewsCount: 28,
+    shortDesc: "High-pressure centrifugal aspiration fan engineered for pneumatic evacuation of rice husks, bran powder, and dust into cyclone collectors.",
+    highlights: [
+      "Air Flow Volume: 3,500 - 6,800 m³/hour at high static pressure",
+      "Thick welded steel scroll housing with replaceable abrasive wear liner",
+      "Dynamically balanced backward-curved impeller resists dust accumulation",
+      "Available with direct-drive motor flange or V-belt pulley shaft"
+    ],
+    specs: {
+      "Air Volume": "3,500 - 6,800 m³/h",
+      "Total Static Pressure": "1,800 - 3,200 Pa",
+      "Recommended Motor": "3.7 - 7.5 kW (5 - 10 HP) 2900 RPM",
+      "Impeller Diameter": "450 mm - 600 mm High-Tensile Steel",
+      "Inlet / Outlet Size": "250 mm / 300 mm round flanged connections",
+      "Impeller Balancing": "ISO 1940 Grade G2.5 dynamically balanced",
+      "Weight": "Approx. 85 kg"
+    },
+    applications: "Rice mill husk aspiration, destoner air circulation, and dust control cyclones.",
+    compatibility: "Connects to standard galvanized cyclone ducting and dehusker exhaust ports."
+  },
+  {
+    id: "screw-impeller-auger",
+    name: "Heavy-Duty Grain Feeding Screw Impeller & Auger Flights",
+    category: "elevator-hardware",
+    categoryName: "Elevator & Transmission",
+    brand: "GrainMaster Conveyors",
+    sku: "GM-AUG-SCREW",
+    price: 175000,
+    priceFormatted: "₦175,000",
+    image: "assets/images/products/screw-impeller-auger.jpg",
+    badge: "Continuous Flight",
+    inStock: true,
+    rating: 4.8,
+    reviewsCount: 33,
+    shortDesc: "Continuous cold-rolled steel screw auger flights and intake feeding impellers designed for smooth, jam-free grain metering into milling chambers.",
+    highlights: [
+      "Formed from 4mm - 6mm heavy manganese wear-resistant steel",
+      "Uniform pitch geometry ensures constant feeding without grain bridging",
+      "Right-hand and Left-hand flight orientations available",
+      "Direct replacement for rice whitener feeding augers and conveyor troughs"
+    ],
+    specs: {
+      "Outer Diameters": "150 mm, 200 mm, 250 mm, 300 mm",
+      "Center Tube Bore": "48 mm, 60 mm, 76 mm heavy seamless pipe",
+      "Pitch Range": "150 mm - 250 mm proportional pitch",
+      "Material Thickness": "4.5 mm flight thickness (outer edge reinforced)",
+      "Standard Lengths": "1.0 Meter, 2.0 Meters, or custom fabrication",
+      "Material": "Q235 Carbon Steel / 16Mn Hardened Steel"
+    },
+    applications: "Horizontal and inclined grain conveying, hopper feeding, and whitener screw intake impellers.",
+    compatibility: "Fits N-70 feed hoppers, Bühler intake screws, and standard U-trough screw conveyors."
+  },
+  {
+    id: "heavy-duty-bearings",
+    name: "Heavy-Duty Pillow Block Bearings (UCP 208, UCP 210, UCF Series)",
+    category: "elevator-hardware",
+    categoryName: "Elevator & Transmission",
+    brand: "SKF / NSK / GrainMaster Grade",
+    sku: "GM-BRG-UCP208",
+    price: 18500,
+    priceFormatted: "₦18,500",
+    image: "assets/images/products/heavy-duty-bearings.jpg",
+    badge: "Industrial Grade",
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 110,
+    shortDesc: "Cast-iron mounted pillow block bearings with double-sealed spherical insert bearings built to withstand continuous vibration and dust in milling environments.",
+    highlights: [
+      "Heavy cast-iron housing (HT200) with grease zerk fitting for easy relubrication",
+      "High-grade chrome steel GCr15 ball bearing insert (Rockwell HRC 60-64)",
+      "Dual heavy-duty contact rubber seals keep abrasive bran dust out of raceways",
+      "Available in 2-bolt pillow block (UCP) and 4-bolt square flange (UCF)"
+    ],
+    specs: {
+      "Models in Stock": "UCP 205, 206, 207, 208 (40mm), 209, 210 (50mm), 212, UCF 208",
+      "Shaft Diameters": "25 mm up to 60 mm precision bore",
+      "Housing Material": "Chilled Grey Cast Iron",
+      "Insert Bearing": "Spherical self-aligning chrome steel deep groove ball bearing",
+      "Locking Method": "Set screw collar or eccentric locking ring",
+      "Dynamic Load Rating": "Up to 32.5 kN (UCP 210)",
+      "Operating Temp": "-20°C to +120°C"
+    },
+    applications: "Main drive shafts on rice hullers, polishers, elevator head/boot pulleys, and hammer mills.",
+    compatibility: "Universal ISO dimensional standard for all industrial grain machinery."
+  },
+  {
+    id: "industrial-fasteners",
+    name: "High-Tensile Industrial Bolts, Nuts & V-Belt Hardware Kit",
+    category: "elevator-hardware",
+    categoryName: "Elevator & Transmission",
+    brand: "GrainMaster Industrial",
+    sku: "GM-FST-KIT-88",
+    price: 45000,
+    priceFormatted: "₦45,000",
+    image: "assets/images/products/industrial-fasteners.jpg",
+    badge: "Workshop Pack",
+    inStock: true,
+    rating: 4.8,
+    reviewsCount: 52,
+    shortDesc: "Comprehensive workshop assortment of Grade 8.8 high-tensile machine bolts, lock washers, nylon locknuts, and shaft keys for rice mill maintenance.",
+    highlights: [
+      "Grade 8.8 high-tensile carbon steel resists machine vibration loosening",
+      "Corrosion-resistant yellow zinc dichromate or black oxide plating",
+      "Assorted metric sizes (M8, M10, M12, M16) for motor bases, frames, and screens",
+      "Includes keyway bar stock and spring washers for mill mechanics"
+    ],
+    specs: {
+      "Quantity": "Box of 250+ assorted heavy industrial fasteners",
+      "Strength Class": "ISO 898-1 Class 8.8 (Tensile strength 800 N/mm²)",
+      "Sizes Included": "M8 (30-50mm), M10 (35-70mm), M12 (40-80mm), M16 (50-100mm)",
+      "Accessories": "Nyloc nuts, heavy spring washers, flat DIN 125 washers, key steel",
+      "Storage": "Organized heavy-duty metal latch storage case"
+    },
+    applications: "Essential maintenance spares kit for rice mill owners and mechanics in Kano and surrounding milling clusters.",
+    compatibility: "Universal fit for all machine frames, motor mounting rails, and bearing blocks."
+  },
+
+  // --- SECTION 6: MAIZE MILLING & GRAIN CRUSHING ---
+  {
+    id: "hammer-mill-cyclone",
+    name: "Heavy-Duty Grain & Maize Hammer Mill with Cyclone Collector",
+    category: "maize-milling",
+    categoryName: "Maize Milling & Crushing",
+    brand: "GrainMaster Pulverizer",
+    sku: "GM-HM-CYC-20HP",
+    price: 3650000,
+    priceFormatted: "₦3,650,000",
+    image: "assets/images/products/hammer-mill-cyclone.jpg",
+    badge: "High Power Crushing",
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 45,
+    shortDesc: "Industrial high-speed hammer mill pulverizer fitted with hardened alloy beaters, 360-degree round-hole sieve, and pneumatic cyclone collection system.",
+    highlights: [
+      "Crushing Capacity: 1,500 - 3,000 kg/hour (Maize, Corn, Sorghum, Soya, Rice Husks)",
+      "Power Requirement: 15 - 22 kW (20 - 30 HP electric motor or 28HP Diesel)",
+      "Pneumatic cyclone discharger eliminates dust and packs meal directly into bags",
+      "Reversible hardened steel hammer beaters deliver double the service life"
+    ],
+    specs: {
+      "Model": "GrainMaster HM-600 Turbo",
+      "Capacity": "1,500 - 3,000 kg/h depending on sieve screen mesh",
+      "Rotor Speed": "2,850 - 3,200 RPM",
+      "Number of Hammers": "24 to 36 Reversible Alloy Beaters",
+      "Screen Mesh Sizes": "1.0 mm (Flour), 2.0 mm (Poultry feed), 4.0 mm, 6.0 mm (Grits)",
+      "Cyclone Separator": "High-efficiency cyclone with rotary airlock discharge valve",
+      "Chamber Material": "Heavy 10 mm welded steel plate with replaceable wear plates",
+      "Total Weight": "Approx. 520 kg",
+      "Warranty": "12 Months Structural Warranty"
+    },
+    applications: "Maize flour milling, corn grits production, animal and poultry feed formulation, and rice husk pulverizing for briquetting.",
+    compatibility: "Interchangeable sieve screens from 0.8 mm up to 8.0 mm."
+  },
+  {
+    id: "hammer-mill-beaters",
+    name: "Hardened Tungsten Carbide Tipped Hammer Mill Beaters & Screens",
+    category: "maize-milling",
+    categoryName: "Maize Milling & Crushing",
+    brand: "GrainMaster ToughBeat",
+    sku: "GM-HM-BTR-SET",
+    price: 48000,
+    priceFormatted: "₦48,000",
+    image: "assets/images/products/hammer-mill-beaters.jpg",
+    badge: "Tungsten Hardfaced",
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 78,
+    shortDesc: "Heat-treated manganese steel hammer blades hardfaced with tungsten carbide on working corners to resist extreme abrasive wear from continuous maize crushing.",
+    highlights: [
+      "Hardfaced working corners achieve Rockwell hardness up to HRC 62-65",
+      "Reversible 4-way design allows flipping to expose 4 fresh striking faces",
+      "Precision weight matched (within ±1.5 grams) to prevent rotor vibration",
+      "Delivers up to 400 operating hours of grain crushing before replacement"
+    ],
+    specs: {
+      "Set Quantity": "Set of 24 Reversible Hammer Blades",
+      "Material": "65Mn Spring Steel with Tungsten Carbide Weld Overlay",
+      "Dimensions": "150 mm Length × 50 mm Width × 6 mm / 8 mm Thickness",
+      "Hole Diameter": "20 mm / 25 mm pivot pin hole (heat treated bushing)",
+      "Hardness": "Body HRC 45 | Working Face HRC 62+",
+      "Screen Compatibility": "Round-hole perforated sieves in 1.5mm, 2mm, 3mm"
+    },
+    applications: "Replacement hammers for agricultural feed mills and industrial maize pulverizers.",
+    compatibility: "Universal fit for standard 150mm rotor hammer mill assemblies."
+  },
+  {
+    id: "maize-degerminator",
+    name: "Commercial Maize Degerminator & Corn Peeling Machine",
+    category: "maize-milling",
+    categoryName: "Maize Milling & Crushing",
+    brand: "GrainMaster CornPro",
+    sku: "GM-MZ-DEGERM-15",
+    price: 4200000,
+    priceFormatted: "₦4,200,000",
+    image: "assets/images/products/maize-degerminator.jpg",
+    badge: "Pure Corn Grits",
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 22,
+    shortDesc: "High-efficiency dry maize degerming and peeling machine that removes the outer bran skin and germ from corn kernels to produce high-purity brewing and meal grits.",
+    highlights: [
+      "Processing Capacity: 1,200 - 2,000 kg/hour of dry or tempered maize",
+      "Power Requirement: 15 - 18.5 kW (20 - 25 HP)",
+      "Degerming Rate: ≥ 90% with low fat content in end grits (< 1.0%)",
+      "Equipped with built-in suction blower to extract separated maize bran"
+    ],
+    specs: {
+      "Model": "CornPro MZ-2000",
+      "Throughput": "1,200 - 2,000 kg/h",
+      "Peeling Roller": "Specialized alloy iron roller with spiral peeling ribs",
+      "Degerming Screen": "Heavy-duty slotted stainless steel degerming sieve",
+      "Aspiration System": "Integrated negative-pressure bran extraction fan",
+      "Motor Required": "15 kW 3-Phase 380V/50Hz",
+      "Dimensions (L×W×H)": "1,450 × 900 × 1,600 mm",
+      "Weight": "650 kg",
+      "Warranty": "12 Months Warranty"
+    },
+    applications: "Essential pre-milling machine for producing high-grade semovita, maize grits for breweries, and export-quality corn meal.",
+    compatibility: "Supplied with replacement stainless steel degerminator screens and peeling rollers."
+  }
+];
+
+// Category metadata
+const CATEGORIES = [
+  { id: "all", name: "All Machinery & Spares", icon: "fas fa-th-large" },
+  { id: "rice-machines", name: "Rice Milling Machines", icon: "fas fa-cogs" },
+  { id: "color-sorter", name: "Color Sorters & Spares", icon: "fas fa-eye" },
+  { id: "rollers-abrasives", name: "Rollers & Abrasives", icon: "fas fa-circle-notch" },
+  { id: "screens-sieves", name: "Screens & Sieves", icon: "fas fa-braille" },
+  { id: "elevator-hardware", name: "Elevator & Transmission", icon: "fas fa-dolly" },
+  { id: "maize-milling", name: "Maize Milling & Crushing", icon: "fas fa-wheat-awn" }
+];
