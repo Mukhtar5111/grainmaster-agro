@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div class="cart-item-info">
           <h4 class="cart-item-title">${item.name}</h4>
-          <div class="cart-item-price">${formatNaira(item.price)} × ${item.quantity} = <strong>${formatNaira(item.price * item.quantity)}</strong></div>
+          <div class="cart-item-sku" style="font-size:0.8rem; color:var(--slate-500); font-weight:600; margin-bottom:0.4rem;">SKU: ${item.sku} &bull; Qty: <strong>${item.quantity}</strong></div>
           <div class="cart-item-bottom">
             <div class="cart-mini-qty">
               <button class="cart-qty-btn" onclick="window.appUpdateCartQty('${item.id}', -1)" aria-label="Decrease quantity">-</button>
@@ -186,15 +186,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const custOrderType = document.getElementById("custOrderType")?.value || "Purchase Order & Delivery";
       const custNotes = document.getElementById("custNotes")?.value.trim() || "None";
 
-      const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-
       let orderItemsText = "";
       cart.forEach((item, index) => {
-        orderItemsText += `${index + 1}. *${item.name}*\n   - SKU: ${item.sku}\n   - Qty: ${item.quantity}\n   - Unit Price: ${formatNaira(item.price)}\n   - Total: ${formatNaira(item.price * item.quantity)}\n\n`;
+        orderItemsText += `${index + 1}. *${item.name}*\n   - SKU: ${item.sku}\n   - Quantity: ${item.quantity}\n\n`;
       });
 
       const message = 
-`🌾 *OFFICIAL ORDER / ENQUIRY - GRAINMASTER AGRO SOLUTIONS LTD.*
+`🌾 *OFFICIAL ORDER / QUOTATION REQUEST - GRAINMASTER AGRO SOLUTIONS LTD.*
 *Company RC:* RC9167936
 *Showroom:* GF7, Helu Plaza, France Rd by Galadima, Kano Nigeria
 
@@ -205,12 +203,9 @@ document.addEventListener("DOMContentLoaded", () => {
 • *Order Request Type:* ${custOrderType}
 • *Special Notes:* ${custNotes}
 
-📦 *ITEMS ORDERED / REQUESTED:*
+📦 *EQUIPMENT & SPARE PARTS REQUESTED:*
 ${orderItemsText}
-💰 *ESTIMATED TOTAL:* *${formatNaira(subtotal)}*
-_(Excluding delivery / installation where applicable)_
-
-📍 Please confirm stock availability at your Kano warehouse, payment details, and estimated dispatch time. Thank you!`;
+📍 Please provide the official price quotation, stock confirmation at your Kano showroom, and dispatch schedule. Thank you!`;
 
       const encoded = encodeURIComponent(message);
       const whatsappUrl = `https://wa.me/2349032326937?text=${encoded}`;
@@ -264,9 +259,8 @@ _(Excluding delivery / installation where applicable)_
                 <th>#</th>
                 <th>Item Description</th>
                 <th>Part SKU</th>
-                <th>Qty</th>
-                <th>Unit Price</th>
-                <th>Total</th>
+                <th>Category</th>
+                <th>Quantity Required</th>
               </tr>
             </thead>
             <tbody>
@@ -275,14 +269,13 @@ _(Excluding delivery / installation where applicable)_
                   <td>${idx + 1}</td>
                   <td><strong>${i.name}</strong></td>
                   <td>${i.sku}</td>
-                  <td>${i.quantity}</td>
-                  <td>${formatNaira(i.price)}</td>
-                  <td>${formatNaira(i.price * i.quantity)}</td>
+                  <td>${i.category}</td>
+                  <td>${i.quantity} unit(s)</td>
                 </tr>
               `).join("")}
             </tbody>
           </table>
-          <div class="total-box">Grand Total: ${formatNaira(subtotal)}</div>
+          <div class="total-box" style="font-size:15px; color:#0f5132;">Pricing: Formal Quotation Issued on Request</div>
           <div class="bank-info">
             <strong>OFFICIAL SETTLEMENT & ORDER CONFIRMATION INSTRUCTIONS:</strong><br>
             Please present this quotation at our showroom: <em>GF7, Helu plaza, France rd by Galadima, Kano</em> or verify via WhatsApp at <strong>+2349032326937</strong>.<br>
@@ -327,8 +320,7 @@ _(Excluding delivery / installation where applicable)_
           </ul>
 
           <div class="product-card-footer">
-            <div class="price-stock-row">
-              <span class="product-price">${formatNaira(product.price)}</span>
+            <div class="price-stock-row" style="justify-content: flex-end;">
               <span class="stock-indicator">In Stock Kano</span>
             </div>
             <div class="card-actions-grid">
@@ -495,7 +487,7 @@ _(Excluding delivery / installation where applicable)_
     document.getElementById("modalTitle").textContent = product.name;
     document.getElementById("modalSku").textContent = `SKU: ${product.sku}`;
     document.getElementById("modalCategoryName").textContent = `Category: ${product.categoryName}`;
-    document.getElementById("modalPrice").textContent = formatNaira(product.price);
+    // document.getElementById("modalPrice").textContent = formatNaira(product.price);
     document.getElementById("modalShortDesc").textContent = product.shortDesc;
 
     // Build Specs Table
@@ -626,15 +618,13 @@ _(Excluding delivery / installation where applicable)_
 *Registration:* RC9167936
 *Showroom:* GF7, Helu Plaza, France Rd by Galadima, Kano Nigeria
 
-Hello GrainMaster, I would like to inquire about the following item:
+Hello GrainMaster, I would like to inquire about pricing and availability for:
 • *Product:* ${currentModalProduct.name}
 • *SKU:* ${currentModalProduct.sku}
 • *Category:* ${currentModalProduct.categoryName}
-• *Unit Price:* ${formatNaira(currentModalProduct.price)}
 • *Quantity Required:* ${qty} unit(s)
-• *Estimated Total:* ${formatNaira(currentModalProduct.price * qty)}
 
-Please advise on stock availability at your Kano warehouse, pickup instructions or nationwide freight rates.`;
+Please advise on the official price quotation, stock availability at your Kano warehouse, pickup instructions or nationwide freight rates.`;
 
       const url = `https://wa.me/2349032326937?text=${encodeURIComponent(msg)}`;
       window.open(url, "_blank");

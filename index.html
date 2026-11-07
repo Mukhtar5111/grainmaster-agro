@@ -25,33 +25,6 @@
 </head>
 <body>
 
-  <!-- Top Notification & Authority Strip -->
-  <div class="top-bar">
-    <div class="container">
-      <div class="top-bar-left">
-        <span class="rc-badge">RC: 9167936</span>
-        <span class="top-bar-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <span>GF7, Helu plaza, France rd by Galadima, Kano Nigeria</span>
-        </span>
-        <span class="top-bar-item">
-          <i class="fas fa-truck-fast"></i>
-          <span>Immediate Kano Pickup & Nationwide 36-State Freight</span>
-        </span>
-      </div>
-      <div class="top-bar-right">
-        <a href="tel:+2349032326937" class="top-bar-item top-bar-link">
-          <i class="fas fa-phone-volume"></i>
-          <span>+2349032326937</span>
-        </a>
-        <a href="https://wa.me/2349032326937" target="_blank" class="top-bar-item top-bar-link" style="color: #4ade80;">
-          <i class="fab fa-whatsapp"></i>
-          <span>WhatsApp Showroom</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <!-- Main Header -->
   <header class="main-header">
     <div class="container">
@@ -87,13 +60,6 @@
 
         <!-- Header Actions -->
         <div class="header-actions">
-          <a href="tel:+2349032326937" class="header-contact-pill">
-            <i class="fas fa-headset"></i>
-            <div>
-              <span style="font-size:0.7rem; color:var(--slate-500); display:block; line-height:1;">Call Direct:</span>
-              <span>+2349032326937</span>
-            </div>
-          </a>
 
           <!-- Cart Trigger Button -->
           <button id="cartTriggerBtn" class="cart-trigger-btn" aria-label="View Shopping Cart">
@@ -126,10 +92,6 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content">
-          <div class="hero-pill">
-            <i class="fas fa-certificate"></i>
-            <span>RC9167936 Certified Agro-Industrial Hub • Kano, Nigeria</span>
-          </div>
           <h2 class="hero-title">
             Commercial <span>Rice Milling</span> Machinery, Spare Parts & Optical Color Sorters
           </h2>
@@ -176,10 +138,7 @@
               <h3>Bühler TopWhite™ BSPB Rice Whitener</h3>
               <p>Vertical abrasive technology engineered for 4.0 - 7.0 Tons/h output, lowest broken grain ratio, and cool air bran evacuation.</p>
               <div class="hero-card-footer">
-                <div>
-                  <span style="font-size:0.75rem; color:#94a3b8; display:block;">Certified Machine Price:</span>
-                  <span class="hero-card-price">₦18,500,000</span>
-                </div>
+                <div><span class="stock-indicator" style="font-size:0.82rem; padding:0.3rem 0.75rem;">In Stock Kano</span></div>
                 <button class="btn-primary" onclick="window.appOpenModal('buhler-topwhite-bspb')" style="padding: 0.6rem 1.1rem; font-size: 0.85rem;">
                   <i class="fas fa-sliders-h"></i> View Full Specs
                 </button>
@@ -548,7 +507,6 @@
               <span id="modalCategoryName">Category</span>
               <span style="color:#16a34a; font-weight:700;"><i class="fas fa-check-circle"></i> In Stock Kano</span>
             </div>
-            <div class="modal-price" id="modalPrice">₦0</div>
             <p id="modalShortDesc" style="font-size:0.88rem; color:#475569; margin-top:0.5rem; line-height:1.45;"></p>
           </div>
 
@@ -616,10 +574,7 @@
 
     <!-- Customer Form & Checkout Section -->
     <div class="cart-checkout-section">
-      <div class="cart-subtotal-row">
-        <span>Estimated Subtotal:</span>
-        <span class="cart-subtotal-amount" id="cartSubtotalAmount">₦0</span>
-      </div>
+      <div class="cart-subtotal-row"><span>Equipment Request List:</span><span style="font-size:0.85rem; color:var(--primary); font-weight:700;">Price on Request</span></div>
 
       <div class="checkout-form-group">
         <input type="text" id="custName" placeholder="Your Full Name / Mill Company Name *" required />
