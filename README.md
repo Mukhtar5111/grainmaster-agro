@@ -5,6 +5,7 @@
 - **Corporate Registration:** RC9167936
 - **Head Office & Showroom:** GF7, Helu plaza, France rd by Galadima, Kano Nigeria
 - **Direct Hotline & WhatsApp:** +2349032326937
+- **Official Domain:** [https://grainmasteragro.com](https://grainmasteragro.com)
 - **Official Platform:** Static GitHub Pages Architecture (HTML5, Vanilla CSS3, Vanilla JS ES6+)
 
 ---
