@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // DOM Elements
   const cartTriggerBtn = document.getElementById("cartTriggerBtn");
+  const mobileFloatingCartBtn = document.getElementById("mobileFloatingCartBtn");
   const cartDrawer = document.getElementById("cartDrawer");
   const cartOverlay = document.getElementById("cartOverlay");
   const cartCloseBtn = document.getElementById("cartCloseBtn");
@@ -169,6 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   if (cartTriggerBtn) cartTriggerBtn.addEventListener("click", openCart);
+  if (mobileFloatingCartBtn) mobileFloatingCartBtn.addEventListener("click", openCart);
   if (cartCloseBtn) cartCloseBtn.addEventListener("click", closeCart);
   if (cartOverlay) cartOverlay.addEventListener("click", closeCart);
 
