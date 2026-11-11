@@ -177,6 +177,20 @@ button {
 }
 
 /* Logo */
+
+.brand-logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 10px rgba(15, 81, 50, 0.25);
+  transition: transform var(--transition-fast);
+}
+
+.brand-logo:hover .brand-logo-img {
+  transform: scale(1.05);
+}
+
 .brand-logo {
   display: flex;
   align-items: center;
