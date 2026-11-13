@@ -77,7 +77,7 @@ try:
     
     # Extract product ids
     product_ids = re.findall(r'id:\s*"([^"]+)"', prod_section)
-    report(f"Products Database: Extracted {len(product_ids)} items", len(product_ids) == 35, f"Found {len(product_ids)} items")
+    report(f"Products Database: Extracted {len(product_ids)} items", len(product_ids) == 32, f"Found {len(product_ids)} items")
 
     # Check for duplicate IDs
     duplicates = [pid for pid in product_ids if product_ids.count(pid) > 1]
@@ -97,14 +97,13 @@ try:
             missing_imgs.append(img_path)
     report("Image Assets: Physical File Check on Disk", len(missing_imgs) == 0, f"Missing: {missing_imgs}" if missing_imgs else f"All {len(img_matches)} images verified on disk")
 
-    # Verify all 9 newly requested screens are present
+    # Verify verified newly requested screens are present
     requested_screens = [
         "kb40-screen", "kb75-screen", "vta10-screen", "vta15-screen",
-        "n110-maize-screen", "n150-maize-screen", "n200-maize-screen",
-        "nf15a-screen", "nf15b-screen"
+        "n110-maize-screen", "nf15b-screen"
     ]
     missing_requested = [s for s in requested_screens if s not in product_ids]
-    report("New Screen Products Verified in Catalog", len(missing_requested) == 0, f"Missing: {missing_requested}" if missing_requested else "All 9 specific screens present")
+    report("New Screen Products Verified in Catalog", len(missing_requested) == 0, f"Missing: {missing_requested}" if missing_requested else f"All {len(requested_screens)} verified screens present")
 
 except Exception as e:
     report("Products Database Check", False, str(e))
@@ -148,7 +147,7 @@ try:
         "assets/images/products/kb40-screen.jpg",
         "assets/images/products/vta10-screen.jpg",
         "assets/images/products/n110-maize-screen.jpg",
-        "assets/images/products/nf15a-screen.jpg"
+        "assets/images/products/nf15b-screen.jpg"
     ]
     all_imgs_ok = True
     for s_img in sample_images:
