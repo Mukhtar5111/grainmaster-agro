@@ -660,32 +660,12 @@ Please advise on the official price quotation, stock availability at your Kano w
       ? "https://grainmasteragro.com"
       : window.location.origin;
     const productUrl = `${baseUrl}/?product=${encodeURIComponent(product.id)}`;
-    const imageUrl = `${baseUrl}/${product.image}`;
 
-    // Extract top 4 specifications
-    const specsEntries = Object.entries(product.specs || {}).slice(0, 4);
-    const specsSummary = specsEntries.length > 0
-      ? specsEntries.map(([k, v]) => `  • *${k}:* ${v}`).join("\n")
-      : "";
-
-    return `🌾 *${product.name.toUpperCase()}*
-🏷️ *Brand:* ${product.brand} | *SKU:* ${product.sku}
-🏢 *GrainMaster Agro Solutions Ltd.* (Kano, Nigeria)
-
-📝 *Overview:*
+    return `🌾 *${product.name}* (${product.sku})
 ${product.shortDesc}
 
-⚙️ *Key Specifications:*
-${specsSummary}
-
-✅ *Availability:* In Stock at Kano Warehouse (GF7 Helu Plaza, France Rd by Galadima)
-🚚 *Nationwide Delivery:* Immediate Kano pickup or nationwide freight forwarding across all 36 states.
-
-🔗 *View Full Specifications & Product Details:*
-${productUrl}
-
-🖼️ *Item Image:*
-${imageUrl}`;
+📍 Available at GrainMaster Kano • Nationwide Delivery
+🔗 ${productUrl}`;
   };
 
   const shareProductToWhatsApp = async (productId, event) => {
@@ -697,34 +677,67 @@ ${imageUrl}`;
     if (!product) return;
 
     const shareText = getProductShareText(product);
-    const baseUrl = window.location.origin.includes("grainmasteragro.com")
-      ? "https://grainmasteragro.com"
-      : window.location.origin;
-    const imageUrl = `${baseUrl}/${product.image}`;
 
-    // Try native Web Share API with image file attachment (modern mobile Android/iOS)
-    if (navigator.share && navigator.canShare) {
+    // Fetch the product image as a blob
+    let file = null;
+    let blob = null;
+    try {
+      const response = await fetch(product.image);
+      if (response.ok) {
+        blob = await response.blob();
+        const isPng = product.image.toLowerCase().endsWith(".png");
+        const ext = isPng ? "png" : "jpg";
+        const mimeType = isPng ? "image/png" : "image/jpeg";
+        file = new File([blob], `${product.id}.${ext}`, { type: mimeType });
+      }
+    } catch (err) {
+      console.warn("Could not load image file for sharing:", err);
+    }
+
+    // 1. Native Mobile Web Share API: Uploads the physical image directly into WhatsApp
+    if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
       try {
-        const response = await fetch(imageUrl);
-        if (response.ok) {
-          const blob = await response.blob();
-          const file = new File([blob], `${product.id}.jpg`, { type: blob.type || "image/jpeg" });
-          if (navigator.canShare({ files: [file] })) {
-            await navigator.share({
-              title: product.name,
-              text: shareText,
-              files: [file]
-            });
-            return;
-          }
-        }
+        await navigator.share({
+          files: [file],
+          text: shareText
+        });
+        return;
       } catch (err) {
-        if (err.name === "AbortError") return;
-        console.warn("Web Share with file bypassed or canceled, using WhatsApp direct link:", err);
+        if (err.name === "AbortError") return; // User closed share drawer
+        console.warn("Native file share aborted, using web fallback:", err);
       }
     }
 
-    // Direct WhatsApp share fallback (WhatsApp Web / App with encoded message & preview)
+    // 2. Desktop Fallback (WhatsApp Web):
+    // Copy the image directly to the system clipboard so the user can paste (Ctrl+V) directly into chat
+    if (blob && navigator.clipboard && window.ClipboardItem) {
+      try {
+        const img = new Image();
+        img.src = product.image;
+        await img.decode();
+        const canvas = document.createElement("canvas");
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0);
+        canvas.toBlob(async (pngBlob) => {
+          if (pngBlob) {
+            try {
+              await navigator.clipboard.write([
+                new ClipboardItem({ "image/png": pngBlob })
+              ]);
+              showToast("Image copied! Paste (Ctrl+V) into WhatsApp", "fa-clipboard-check");
+            } catch (clipErr) {
+              console.warn("Clipboard write failed:", clipErr);
+            }
+          }
+        }, "image/png");
+      } catch (err) {
+        console.warn("Canvas clipboard processing skipped:", err);
+      }
+    }
+
+    // Direct WhatsApp share URL with concise text & product link
     const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
     window.open(waUrl, "_blank");
   };
