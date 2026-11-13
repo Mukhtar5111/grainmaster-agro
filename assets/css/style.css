@@ -937,8 +937,30 @@ button {
 
 .card-actions-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 0.45rem;
+}
+
+.btn-card-share {
+  background: #25d366;
+  color: var(--white);
+  padding: 0.55rem 0.7rem;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 6px rgba(37, 211, 102, 0.25);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-card-share:hover {
+  background: #1eb956;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.35);
 }
 
 .btn-view-specs {
@@ -1359,6 +1381,30 @@ button {
 
 .btn-modal-whatsapp:hover {
   background: #1eb956;
+}
+
+.btn-modal-share-whatsapp {
+  height: 44px;
+  background: #128c7e;
+  color: var(--white);
+  padding: 0 1.15rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(18, 140, 126, 0.25);
+  transition: all var(--transition-fast);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-modal-share-whatsapp:hover {
+  background: #075e54;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(18, 140, 126, 0.35);
 }
 
 /* ==========================================================================

@@ -332,6 +332,9 @@ ${orderItemsText}
               <button class="btn-add-cart" onclick="window.appAddToCart('${product.id}')">
                 <i class="fas fa-cart-plus"></i> Order
               </button>
+              <button class="btn-card-share" onclick="window.appShareToWhatsApp('${product.id}', event)" title="Share to WhatsApp" aria-label="Share on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -549,6 +552,15 @@ ${orderItemsText}
     // Open Modal
     productModal.classList.add("active");
     document.body.style.overflow = "hidden";
+
+    // Update URL query parameter for deep linking
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.set("product", product.id);
+      window.history.replaceState({ productId: product.id }, product.name, url.toString());
+    } catch (e) {
+      // Ignore URL history errors
+    }
   };
 
   window.appOpenModal = openProductModal;
@@ -557,6 +569,15 @@ ${orderItemsText}
     productModal.classList.remove("active");
     document.body.style.overflow = "";
     currentModalProduct = null;
+
+    // Reset URL query parameter
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.delete("product");
+      window.history.replaceState({}, document.title, url.toString());
+    } catch (e) {
+      // Ignore URL history errors
+    }
   };
 
   if (modalCloseBtn) modalCloseBtn.addEventListener("click", closeProductModal);
@@ -633,6 +654,107 @@ Please advise on the official price quotation, stock availability at your Kano w
     });
   }
 
+  // --- WHATSAPP PRODUCT SHARING SYSTEM ---
+  const getProductShareText = (product) => {
+    const baseUrl = window.location.origin.includes("grainmasteragro.com")
+      ? "https://grainmasteragro.com"
+      : window.location.origin;
+    const productUrl = `${baseUrl}/?product=${encodeURIComponent(product.id)}`;
+    const imageUrl = `${baseUrl}/${product.image}`;
+
+    // Extract top 4 specifications
+    const specsEntries = Object.entries(product.specs || {}).slice(0, 4);
+    const specsSummary = specsEntries.length > 0
+      ? specsEntries.map(([k, v]) => `  • *${k}:* ${v}`).join("\n")
+      : "";
+
+    return `🌾 *${product.name.toUpperCase()}*
+🏷️ *Brand:* ${product.brand} | *SKU:* ${product.sku}
+🏢 *GrainMaster Agro Solutions Ltd.* (Kano, Nigeria)
+
+📝 *Overview:*
+${product.shortDesc}
+
+⚙️ *Key Specifications:*
+${specsSummary}
+
+✅ *Availability:* In Stock at Kano Warehouse (GF7 Helu Plaza, France Rd by Galadima)
+🚚 *Nationwide Delivery:* Immediate Kano pickup or nationwide freight forwarding across all 36 states.
+
+🔗 *View Full Specifications & Product Details:*
+${productUrl}
+
+🖼️ *Item Image:*
+${imageUrl}`;
+  };
+
+  const shareProductToWhatsApp = async (productId, event) => {
+    if (event) {
+      event.stopPropagation();
+      event.preventDefault();
+    }
+    const product = PRODUCTS_DATA.find((p) => p.id === productId);
+    if (!product) return;
+
+    const shareText = getProductShareText(product);
+    const baseUrl = window.location.origin.includes("grainmasteragro.com")
+      ? "https://grainmasteragro.com"
+      : window.location.origin;
+    const imageUrl = `${baseUrl}/${product.image}`;
+
+    // Try native Web Share API with image file attachment (modern mobile Android/iOS)
+    if (navigator.share && navigator.canShare) {
+      try {
+        const response = await fetch(imageUrl);
+        if (response.ok) {
+          const blob = await response.blob();
+          const file = new File([blob], `${product.id}.jpg`, { type: blob.type || "image/jpeg" });
+          if (navigator.canShare({ files: [file] })) {
+            await navigator.share({
+              title: product.name,
+              text: shareText,
+              files: [file]
+            });
+            return;
+          }
+        }
+      } catch (err) {
+        if (err.name === "AbortError") return;
+        console.warn("Web Share with file bypassed or canceled, using WhatsApp direct link:", err);
+      }
+    }
+
+    // Direct WhatsApp share fallback (WhatsApp Web / App with encoded message & preview)
+    const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
+    window.open(waUrl, "_blank");
+  };
+
+  window.appShareToWhatsApp = shareProductToWhatsApp;
+
+  // Modal Share to WhatsApp Button
+  const btnModalShareWhatsApp = document.getElementById("btnModalShareWhatsApp");
+  if (btnModalShareWhatsApp) {
+    btnModalShareWhatsApp.addEventListener("click", (e) => {
+      if (!currentModalProduct) return;
+      shareProductToWhatsApp(currentModalProduct.id, e);
+    });
+  }
+
+  // Deep-link URL inspector (auto-opens modal if ?product=ID or #ID is in the URL)
+  const checkUrlForProduct = () => {
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const prodId = urlParams.get("product") || window.location.hash.replace("#", "");
+      if (prodId && PRODUCTS_DATA.some((p) => p.id === prodId)) {
+        setTimeout(() => {
+          openProductModal(prodId);
+        }, 200);
+      }
+    } catch (e) {
+      console.warn("Error checking product URL parameter:", e);
+    }
+  };
+
   // --- CONSOLIDATED COLLAPSIBLE FLOATING BUTTON (FAB) ---
   if (fabToggleBtn && fabContainer) {
     fabToggleBtn.addEventListener("click", (e) => {
@@ -662,4 +784,5 @@ Please advise on the official price quotation, stock availability at your Kano w
   populateHorizontalTracks();
   setupScrollButtons();
   renderFilteredProducts();
+  checkUrlForProduct();
 });

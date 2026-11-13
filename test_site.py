@@ -43,18 +43,29 @@ with open("index.html", "r", encoding="utf-8") as f:
 required_strings = [
     "GrainMaster Agro Solutions Ltd.",
     "RC9167936",
-    "GF7, Helu plaza, France rd by Galadima, Kano Nigeria",
     "+2349032326937",
     "trackRiceMachines",
     "trackScreensRollers",
     "trackColorSorters",
     "trackElevatorsMaize",
     "productModal",
+    "btnModalShareWhatsApp",
     "cartDrawer",
     "fabContainer"
 ]
 for rs in required_strings:
     report(f"HTML Content Verification: contains '{rs}'", rs in html_content)
+
+# Check CSS & JS for WhatsApp Share Features
+with open(os.path.join("assets", "css", "style.css"), "r", encoding="utf-8") as f:
+    css_content = f.read()
+report("CSS Share Button Styles: .btn-card-share", ".btn-card-share" in css_content)
+report("CSS Modal Share Button Styles: .btn-modal-share-whatsapp", ".btn-modal-share-whatsapp" in css_content)
+
+with open(os.path.join("assets", "js", "app.js"), "r", encoding="utf-8") as f:
+    app_js_content = f.read()
+report("JS WhatsApp Sharing Function: appShareToWhatsApp", "appShareToWhatsApp" in app_js_content)
+report("JS Deep Link URL Checker: checkUrlForProduct", "checkUrlForProduct" in app_js_content)
 
 # 3. Check JavaScript Products Database Syntax and Consistency
 try:
