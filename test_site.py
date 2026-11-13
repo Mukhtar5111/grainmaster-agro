@@ -77,7 +77,7 @@ try:
     
     # Extract product ids
     product_ids = re.findall(r'id:\s*"([^"]+)"', prod_section)
-    report(f"Products Database: Extracted {len(product_ids)} items", len(product_ids) == 26, f"Found {len(product_ids)} items")
+    report(f"Products Database: Extracted {len(product_ids)} items", len(product_ids) == 35, f"Found {len(product_ids)} items")
 
     # Check for duplicate IDs
     duplicates = [pid for pid in product_ids if product_ids.count(pid) > 1]
@@ -86,8 +86,8 @@ try:
     # Check that each product has image, specs, and price
     img_matches = re.findall(r'image:\s*"([^"]+)"', prod_section)
     price_matches = re.findall(r'price:\s*([0-9]+)', prod_section)
-    report("Products Database: All 26 items have valid images", len(img_matches) == len(product_ids), f"{len(img_matches)}/{len(product_ids)}")
-    report("Products Database: All 26 items have numerical prices", len(price_matches) == len(product_ids), f"{len(price_matches)}/{len(product_ids)}")
+    report(f"Products Database: All {len(product_ids)} items have valid images", len(img_matches) == len(product_ids), f"{len(img_matches)}/{len(product_ids)}")
+    report(f"Products Database: All {len(product_ids)} items have numerical prices", len(price_matches) == len(product_ids), f"{len(price_matches)}/{len(product_ids)}")
 
     # Check every image file exists on disk
     missing_imgs = []
@@ -96,6 +96,15 @@ try:
         if not os.path.exists(full_p) or os.path.getsize(full_p) < 1000:
             missing_imgs.append(img_path)
     report("Image Assets: Physical File Check on Disk", len(missing_imgs) == 0, f"Missing: {missing_imgs}" if missing_imgs else f"All {len(img_matches)} images verified on disk")
+
+    # Verify all 9 newly requested screens are present
+    requested_screens = [
+        "kb40-screen", "kb75-screen", "vta10-screen", "vta15-screen",
+        "n110-maize-screen", "n150-maize-screen", "n200-maize-screen",
+        "nf15a-screen", "nf15b-screen"
+    ]
+    missing_requested = [s for s in requested_screens if s not in product_ids]
+    report("New Screen Products Verified in Catalog", len(missing_requested) == 0, f"Missing: {missing_requested}" if missing_requested else "All 9 specific screens present")
 
 except Exception as e:
     report("Products Database Check", False, str(e))
@@ -135,7 +144,11 @@ try:
         "assets/images/products/buhler-topwhite-bspb.png",
         "assets/images/products/rice-color-sorter.jpg",
         "assets/images/products/rubber-roller-paddy.jpg",
-        "assets/images/products/hammer-mill-cyclone.jpg"
+        "assets/images/products/hammer-mill-cyclone.jpg",
+        "assets/images/products/kb40-screen.jpg",
+        "assets/images/products/vta10-screen.jpg",
+        "assets/images/products/n110-maize-screen.jpg",
+        "assets/images/products/nf15a-screen.jpg"
     ]
     all_imgs_ok = True
     for s_img in sample_images:
