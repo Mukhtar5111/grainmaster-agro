@@ -27,6 +27,11 @@ def report(test_name, passed, detail=""):
 core_files = [
     "index.html",
     "README.md",
+    "favicon.ico",
+    os.path.join("assets", "images", "logo.png"),
+    os.path.join("assets", "images", "favicon.png"),
+    os.path.join("assets", "images", "favicon-32x32.png"),
+    os.path.join("assets", "images", "apple-touch-icon.png"),
     os.path.join("assets", "css", "style.css"),
     os.path.join("assets", "js", "products-data.js"),
     os.path.join("assets", "js", "app.js")
@@ -158,7 +163,9 @@ try:
         "assets/images/products/nf15b-screen.jpg",
         "assets/images/products/sme18-rice-whitener.jpg",
         "assets/images/products/tqsx85-destoner-blower.jpg",
-        "assets/images/products/ye3-motor-20hp.jpg"
+        "assets/images/products/ye3-motor-20hp.jpg",
+        "favicon.ico",
+        "assets/images/favicon-32x32.png"
     ]
     all_imgs_ok = True
     for s_img in sample_images:
