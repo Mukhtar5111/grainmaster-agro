@@ -332,8 +332,8 @@ ${orderItemsText}
               <button class="btn-add-cart" onclick="window.appAddToCart('${product.id}')">
                 <i class="fas fa-cart-plus"></i> Order
               </button>
-              <button class="btn-card-share" onclick="window.appShareToWhatsApp('${product.id}', event)" title="Share to WhatsApp" aria-label="Share on WhatsApp">
-                <i class="fab fa-whatsapp"></i>
+              <button class="btn-card-share" onclick="window.appShareToWhatsApp('${product.id}', event)" title="Share Product" aria-label="Share Product">
+                <i class="fas fa-share-nodes"></i>
               </button>
             </div>
           </div>
