@@ -77,7 +77,7 @@ try:
     
     # Extract product ids
     product_ids = re.findall(r'id:\s*"([^"]+)"', prod_section)
-    report(f"Products Database: Extracted {len(product_ids)} items", len(product_ids) == 32, f"Found {len(product_ids)} items")
+    report(f"Products Database: Extracted {len(product_ids)} items", len(product_ids) == 37, f"Found {len(product_ids)} items")
 
     # Check for duplicate IDs
     duplicates = [pid for pid in product_ids if product_ids.count(pid) > 1]
@@ -104,6 +104,14 @@ try:
     ]
     missing_requested = [s for s in requested_screens if s not in product_ids]
     report("New Screen Products Verified in Catalog", len(missing_requested) == 0, f"Missing: {missing_requested}" if missing_requested else f"All {len(requested_screens)} verified screens present")
+
+    # Verify newly requested machinery and electric motors
+    new_machines_motors = [
+        "sme18-rice-whitener", "tqsx85-destoner-blower",
+        "ye3-motor-20hp", "ye3-motor-30hp", "ye3-motor-40hp"
+    ]
+    missing_new = [m for m in new_machines_motors if m not in product_ids]
+    report("New Machinery & Motors Verified in Catalog", len(missing_new) == 0, f"Missing: {missing_new}" if missing_new else "SME18, TQSX85, and YE3 Motors (20/30/40HP) present")
 
 except Exception as e:
     report("Products Database Check", False, str(e))
@@ -147,7 +155,10 @@ try:
         "assets/images/products/kb40-screen.jpg",
         "assets/images/products/vta10-screen.jpg",
         "assets/images/products/n110-maize-screen.jpg",
-        "assets/images/products/nf15b-screen.jpg"
+        "assets/images/products/nf15b-screen.jpg",
+        "assets/images/products/sme18-rice-whitener.jpg",
+        "assets/images/products/tqsx85-destoner-blower.jpg",
+        "assets/images/products/ye3-motor-20hp.jpg"
     ]
     all_imgs_ok = True
     for s_img in sample_images:

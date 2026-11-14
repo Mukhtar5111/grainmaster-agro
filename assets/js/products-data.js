@@ -220,6 +220,76 @@ const PRODUCTS_DATA = [
     applications: "Finishing stage for high-end packaged rice brands where appearance and shine are paramount.",
     compatibility: "Satake KB40, KB40-G, and equivalent water injection polishing systems."
   },
+  {
+    id: "sme18-rice-whitener",
+    name: "SME18 Commercial Emery Roll Rice Whitener Machine",
+    category: "rice-machines",
+    categoryName: "Rice Milling Machines",
+    brand: "GrainMaster Industrial",
+    sku: "GM-WHT-SME18",
+    price: 7800000,
+    priceFormatted: "₦7,800,000",
+    image: "assets/images/products/sme18-rice-whitener.jpg",
+    badge: "High Output Emery",
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 34,
+    shortDesc: "Heavy-duty horizontal emery roller air-jet rice whitener designed for commercial continuous rice milling, stripping bran cleanly with low grain breakage.",
+    highlights: [
+      "Capacity: 2.0 - 3.5 Tons/hour brown rice to polished white rice",
+      "High-pressure internal air-jet blower cools milling chamber and extracts bran",
+      "Equipped with balanced emery abrasive roll and wear-resistant screen segment",
+      "Heavy cast iron frame ensures zero vibration during continuous operations"
+    ],
+    specs: {
+      "Model": "SME-18 / MNMS-18 Commercial Whitener",
+      "Milling Capacity": "2,000 - 3,500 kg/h",
+      "Motor Power Required": "18.5 kW - 22 kW (25 - 30 HP) 3-Phase",
+      "Spindle Speed": "950 - 1,050 RPM",
+      "Roller Type": "High-grade silicon carbide emery roller",
+      "Air Pressure Required": "> 1,500 Pa negative pressure bran aspiration",
+      "Weight": "Approx. 850 kg",
+      "Dimensions": "1,550 × 680 × 1,600 mm",
+      "Warranty": "12 Months Structural Warranty"
+    },
+    applications: "Primary and secondary whitening of long-grain parboiled and raw rice in commercial mills.",
+    compatibility: "Standard SME-18, MNMS-18, and 18-series emery rolls and whitener sieves."
+  },
+  {
+    id: "tqsx85-destoner-blower",
+    name: "TQSX85 Suction Specific Gravity Destoner with Blower",
+    category: "rice-machines",
+    categoryName: "Rice Milling Machines",
+    brand: "GrainMaster Industrial",
+    sku: "GM-DST-TQSX85",
+    price: 6500000,
+    priceFormatted: "₦6,500,000",
+    image: "assets/images/products/tqsx85-destoner-blower.jpg",
+    badge: "Suction Destoner",
+    inStock: true,
+    rating: 5.0,
+    reviewsCount: 41,
+    shortDesc: "Advanced negative-pressure suction gravity destoner with integrated high-efficiency centrifugal blower, removing stones, mud lumps, and heavy impurities.",
+    highlights: [
+      "Processing Capacity: 4.0 - 6.0 Tons/hour paddy and grain cleaning",
+      "Negative pressure suction blower prevents dust escape into the milling room",
+      "Double-deck reciprocating sieve bed separates stones and glass with zero grain loss",
+      "Built-in observation inspection window with internal lighting"
+    ],
+    specs: {
+      "Model": "TQSX-85 Specific Gravity Destoner",
+      "Output Capacity": "4,000 - 6,000 kg/h",
+      "Vibration Motor": "0.75 kW Dual Eccentric Drive",
+      "Suction Blower Motor": "5.5 kW - 7.5 kW Centrifugal Fan",
+      "Air Volume Required": "3,200 - 3,500 m³/h",
+      "Stone Removal Efficiency": "> 99.5% separation of stones and heavy debris",
+      "Net Weight": "Approx. 520 kg",
+      "Dimensions": "1,420 × 1,180 × 1,850 mm",
+      "Warranty": "12 Months Comprehensive Warranty"
+    },
+    applications: "Essential pre-cleaning for rice milling, maize processing, wheat, and soybean cleaning plants.",
+    compatibility: "Connects directly to standard cyclone separators and elevator intake chutes."
+  },
 
   // --- SECTION 2: OPTICAL COLOR SORTER MACHINES & SPARES ---
   {
@@ -975,6 +1045,111 @@ const PRODUCTS_DATA = [
     },
     applications: "Essential maintenance spares kit for rice mill owners and mechanics in Kano and surrounding milling clusters.",
     compatibility: "Universal fit for all machine frames, motor mounting rails, and bearing blocks."
+  },
+  {
+    id: "ye3-motor-20hp",
+    name: "YE3 Premium 20HP (15kW) Normal Speed Electric Motor",
+    category: "elevator-hardware",
+    categoryName: "Elevator & Transmission",
+    brand: "YE3 Premium Series",
+    sku: "GM-MTR-YE3-20HP",
+    price: 680000,
+    priceFormatted: "₦680,000",
+    image: "assets/images/products/ye3-motor-20hp.jpg",
+    badge: "IE3 Ultra-Efficient",
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 56,
+    shortDesc: "Ultra-high efficiency 20HP (15kW) 3-phase induction electric motor at normal 1450 RPM speed, designed for heavy continuous duty on rice mills and polishers.",
+    highlights: [
+      "Power Rating: 20 HP (15 kW) 4-Pole Normal Speed (1450 - 1470 RPM)",
+      "100% pure copper winding with Class F insulation and IP55 protection",
+      "Cast iron ribbed cooling frame dissipates heat under continuous heavy milling",
+      "High starting torque and low energy consumption (IE3 efficiency standard)"
+    ],
+    specs: {
+      "Rated Power": "15 kW / 20 HP",
+      "Synchronous Speed": "1,500 RPM (Normal Speed 4-Pole, Full Load ~1,460 RPM)",
+      "Frame Size": "160M / 160L Heavy Cast Iron",
+      "Voltage / Frequency": "380V / 400V / 415V 3-Phase 50Hz",
+      "Efficiency Class": "YE3 / IE3 Premium Ultra-High Efficiency",
+      "Enclosure / Protection": "IP55 Dust & Splash Water Resistant",
+      "Insulation Class": "Class F (Temperature rise Class B)",
+      "Shaft Diameter": "42 mm Keyed Drive Shaft",
+      "Weight": "Approx. 125 kg"
+    },
+    applications: "Direct drive for N-70 and N-110 rice polishers, bucket elevators, suction blowers, and hammer mills.",
+    compatibility: "Universal B3 foot-mount standard dimensions."
+  },
+  {
+    id: "ye3-motor-30hp",
+    name: "YE3 Premium 30HP (22kW) Normal Speed Electric Motor",
+    category: "elevator-hardware",
+    categoryName: "Elevator & Transmission",
+    brand: "YE3 Premium Series",
+    sku: "GM-MTR-YE3-30HP",
+    price: 920000,
+    priceFormatted: "₦920,000",
+    image: "assets/images/products/ye3-motor-30hp.jpg",
+    badge: "IE3 Heavy Duty",
+    inStock: true,
+    rating: 5.0,
+    reviewsCount: 47,
+    shortDesc: "Industrial 30HP (22kW) 3-phase normal speed electric motor engineered for high-demand milling machinery, offering exceptional torque and continuous reliability.",
+    highlights: [
+      "Power Rating: 30 HP (22 kW) 4-Pole Normal Speed (1450 - 1475 RPM)",
+      "Precision wound 100% electrolytic copper stator with vacuum impregnation",
+      "Heavy-duty cast iron body with oversized junction box for easy industrial wiring",
+      "Reduces electricity and diesel generator load through high IE3 efficiency"
+    ],
+    specs: {
+      "Rated Power": "22 kW / 30 HP",
+      "Synchronous Speed": "1,500 RPM (4-Pole Normal Speed, ~1,470 RPM load)",
+      "Frame Size": "180L Cast Iron Ribbed Frame",
+      "Voltage / Frequency": "380V / 400V / 415V 3-Phase 50Hz",
+      "Efficiency Standard": "YE3 / IE3 Premium Energy Saving",
+      "Protection Rating": "IP55 Weatherproof & Mill-Dust Proof",
+      "Cooling Method": "IC411 Totally Enclosed Fan-Cooled (TEFC)",
+      "Shaft Diameter": "48 mm Keyed Drive Shaft",
+      "Weight": "Approx. 185 kg"
+    },
+    applications: "Primary driver for N-120 polishers, SME-18 whiteners, large maize degerminators, and high-capacity fans.",
+    compatibility: "Universal B3 foot-mount standard dimensions."
+  },
+  {
+    id: "ye3-motor-40hp",
+    name: "YE3 Premium 40HP (30kW) Normal Speed Electric Motor",
+    category: "elevator-hardware",
+    categoryName: "Elevator & Transmission",
+    brand: "YE3 Premium Series",
+    sku: "GM-MTR-YE3-40HP",
+    price: 1250000,
+    priceFormatted: "₦1,250,000",
+    image: "assets/images/products/ye3-motor-40hp.jpg",
+    badge: "IE3 High Power",
+    inStock: true,
+    rating: 5.0,
+    reviewsCount: 39,
+    shortDesc: "Heavy commercial 40HP (30kW) normal speed 3-phase electric motor built for large milling installations, Bühler-type polishers, and high-tonnage processing plants.",
+    highlights: [
+      "Power Rating: 40 HP (30 kW) 4-Pole Normal Speed (1450 - 1480 RPM)",
+      "Engineered for continuous 24/7 non-stop industrial operations",
+      "Heavy-gauge cast iron construction with reinforced NSK/SKF grade bearings",
+      "Certified IE3 efficiency rating for optimal energy economy on generator grids"
+    ],
+    specs: {
+      "Rated Power": "30 kW / 40 HP",
+      "Synchronous Speed": "1,500 RPM (4-Pole Normal Speed, ~1,475 RPM load)",
+      "Frame Size": "200L Heavy Industrial Cast Frame",
+      "Voltage / Frequency": "380V / 400V / 415V 3-Phase 50Hz",
+      "Efficiency Class": "YE3 / IE3 Ultra-Efficient",
+      "Duty Cycle": "S1 Continuous Industrial Duty",
+      "Protection Rating": "IP55 Dust and Moisture Sealed",
+      "Shaft Diameter": "55 mm Keyed Drive Shaft",
+      "Weight": "Approx. 240 kg"
+    },
+    applications: "Powering Satake KB40/KB75 polishers, Buhler DRPA polishers, vertical whiteners, and commercial hammer mill cyclones.",
+    compatibility: "Universal B3 foot-mount standard dimensions."
   },
 
   // --- SECTION 6: MAIZE MILLING & GRAIN CRUSHING ---
