@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Main Homepage -->
+  <url>
+    <loc>https://grainmasteragro.com/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/logo.png</image:loc>
+      <image:title>GrainMaster Agro Solutions Ltd. Logo</image:title>
+      <image:caption>Commercial Rice Milling Machinery, Spare Parts and Optical Color Sorters Hub in Kano, Nigeria</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Equipment Category Deep Links -->
+  <url>
+    <loc>https://grainmasteragro.com/?category=rice-machines</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?category=screens-sieves</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?category=rollers-abrasives</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?category=color-sorter</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?category=elevator-hardware</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?category=maize-milling</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Individual Product Deep Links with Google Image Sitemap metadata -->
+  <url>
+    <loc>https://grainmasteragro.com/?product=n70-polisher</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/n70-rice-polisher.jpg</image:loc>
+      <image:title>N-70 Combined Rice Polisher &amp; Huller Machine (GM-N70-PLSH) - GrainMaster Kano</image:title>
+      <image:caption>Workhorse commercial rice huller and friction polisher featuring a heavy-duty cast-iron chamber, adjustable pressure plate, and built-in husk suction blower.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=n120-polisher</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/n120-rice-polisher.jpg</image:loc>
+      <image:title>N-120 High-Capacity Commercial Rice Polisher (GM-N120-PLSH) - GrainMaster Kano</image:title>
+      <image:caption>Heavy-duty commercial rice polisher designed for large-scale milling facilities demanding minimal grain breakage and exceptional head rice recovery.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=buhler-topwhite-bspb</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/buhler-topwhite-bspb.png</image:loc>
+      <image:title>Bühler TopWhite™ Vertical Rice Whitener BSPB (GM-BHL-BSPB) - GrainMaster Kano</image:title>
+      <image:caption>The pinnacle of industrial abrasive rice whitening. Uses top-to-bottom vertical gravity grain flow with silicon carbide abrasive rings for maximum head rice yield.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=buhler-drpa-polisher</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/buhler-drpa-polisher.jpg</image:loc>
+      <image:title>Bühler DRPA HighPoly™ Silky Water Mist Rice Polisher (GM-BHL-DRPA) - GrainMaster Kano</image:title>
+      <image:caption>Advanced friction mist polisher that cleans residual bran dust and gives milled rice grains a smooth, crystal-clear, lustrous silky surface with extended shelf life.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=satake-vta-whitener</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/satake-vta-whitener.jpg</image:loc>
+      <image:title>Satake VTA Vertical Abrasive Rice Whitener (GM-STK-VTA) - GrainMaster Kano</image:title>
+      <image:caption>World-renowned Satake-type vertical whitener engineered with high-efficiency abrasive stones and multi-point air induction for cool, high-yield milling.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=satake-kb40-polisher</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/satake-kb40-polisher.jpg</image:loc>
+      <image:title>Satake KB40 Commercial Rice Polishing Machine (GM-STK-KB40) - GrainMaster Kano</image:title>
+      <image:caption>High-performance water mist rice polisher utilizing controlled friction and humidified air to produce shining, dust-free, non-stick rice grains.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=sme18-rice-whitener</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/sme18-rice-whitener.jpg</image:loc>
+      <image:title>SME18 Commercial Emery Roll Rice Whitener Machine (GM-WHT-SME18) - GrainMaster Kano</image:title>
+      <image:caption>Heavy-duty horizontal emery roller air-jet rice whitener designed for commercial continuous rice milling, stripping bran cleanly with low grain breakage.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=tqsx85-destoner-blower</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/tqsx85-destoner-blower.jpg</image:loc>
+      <image:title>TQSX85 Suction Specific Gravity Destoner with Blower (GM-DST-TQSX85) - GrainMaster Kano</image:title>
+      <image:caption>Advanced negative-pressure suction gravity destoner with integrated high-efficiency centrifugal blower, removing stones, mud lumps, and heavy impurities.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=rice-color-sorter-5chute</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/rice-color-sorter.jpg</image:loc>
+      <image:title>AI Multi-Chute RGB CCD Rice Color Sorter Machine (GM-CS-5CH) - GrainMaster Kano</image:title>
+      <image:caption>Ultra-high-definition optical rice color sorter equipped with 5400-pixel RGB full-color CCD cameras, deep-learning sorting algorithms, and high-speed ejectors.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=color-sorter-ejector</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/color-sorter-ejector.jpg</image:loc>
+      <image:title>High-Frequency Color Sorter Micro Solenoid Ejector Valve (GM-CS-EJCT-1200) - GrainMaster Kano</image:title>
+      <image:caption>Genuine high-frequency micro-solenoid ejector valve capable of firing over 1,200 times per second with a lifespan exceeding 10 billion cycles.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=color-sorter-regulator</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/color-sorter-regulator.jpg</image:loc>
+      <image:title>Color Sorter Air Compressor Precision Filter &amp; Pressure Regulator (GM-CS-REG-FRL) - GrainMaster Kano</image:title>
+      <image:caption>High-precision 3-stage air filtration and pressure regulating station (0.01 micron) that protects sensitive color sorter ejector valves from oil, moisture, and dust.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=color-sorter-chute</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/color-sorter-chute.jpg</image:loc>
+      <image:title>Hard Anodized Low-Friction Color Sorter Aluminum Chute (GM-CS-CHUTE-64) - GrainMaster Kano</image:title>
+      <image:caption>Micro-grooved 64-channel anodized aluminum guide chute that aligns rice grains in single-file orientation for flawless optical inspection and ejection.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=rubber-roller-paddy</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/rubber-roller-paddy.jpg</image:loc>
+      <image:title>Heavy-Duty Paddy Dehusker Rubber Rollers (6\ (GM-RR-10IN) - GrainMaster Kano</image:title>
+      <image:caption>Premium cast-iron core rubber rollers formulated with high-grade synthetic nitrile rubber for exceptional shelling rate (≥95%), minimal grain cracking, and long wear life.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=emery-roller-whitener</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/emery-roller-whitener.jpg</image:loc>
+      <image:title>Silicon Carbide Emery Roller Stones for Rice Whiteners (GM-EMR-24G) - GrainMaster Kano</image:title>
+      <image:caption>Precision-molded silicon carbide abrasive stones engineered for vertical and horizontal rice whiteners to deliver rapid bran peeling with lowest grain breakage.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=iron-roller-polisher</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/iron-roller-polisher.jpg</image:loc>
+      <image:title>Hardened Slotted Milled Iron Rollers for Rice Polishers (GM-IR-N70) - GrainMaster Kano</image:title>
+      <image:caption>Chilled cast-alloy slotted friction roller machined with helical bran flutes to generate optimal friction against rice grains without scoring or breakage.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=bspb-screen</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/bspb-screen.jpg</image:loc>
+      <image:title>Bühler TopWhite™ BSPB Rice Whitener Screen Segments (GM-SCR-BSPB-SS) - GrainMaster Kano</image:title>
+      <image:caption>High-grade SS304 perforated vertical whitener screens designed with specialized tapered slots to discharge bran smoothly without clogging or grain leakage.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=drpa-screen</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/drpa-screen.jpg</image:loc>
+      <image:title>Bühler DRPA HighPoly™ Silky Polishing Screen Segments (GM-SCR-DRPA-SS) - GrainMaster Kano</image:title>
+      <image:caption>Precision stainless steel silky polishing screen engineered specifically for Bühler DRPA friction mist polishers to produce clean, mirror-gloss white rice.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=n-series-screen</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/n-series-screen.png</image:loc>
+      <image:title>N-Series Hexagonal Rice Milling Screens (N-70, N-110, N-120) (GM-SCR-HEX-N70) - GrainMaster Kano</image:title>
+      <image:caption>Heavy-duty hexagonal perforated rice mill screens manufactured from high-carbon manganese steel to deliver high bran passage and maximum resistance to wear.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=kb40-screen</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/kb40-screen.jpg</image:loc>
+      <image:title>Satake KB40 Silky Polisher Screen Segments (GM-SCR-KB40-SS) - GrainMaster Kano</image:title>
+      <image:caption>Precision SS304 perforated silky polishing screen segment engineered for Satake KB40 water mist rice polishers to discharge fine bran without grain breakage.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=kb75-screen</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/kb75-screen.jpg</image:loc>
+      <image:title>Satake KB75 Silky Polisher Screen Segments (GM-SCR-KB75-SS) - GrainMaster Kano</image:title>
+      <image:caption>Heavy-duty extended stainless steel polishing screen for high-capacity Satake KB75 silky polishers, engineered for high throughput and long operational lifespan.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=vta10-screen</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/vta10-screen.jpg</image:loc>
+      <image:title>Satake VTA10 Vertical Whitener Screen Segments (GM-SCR-VTA10) - GrainMaster Kano</image:title>
+      <image:caption>Heavy-gauge slotted vertical whitener screen segment engineered for Satake VTA10 machines, featuring laser-perforated slots for superior bran evacuation.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=vta15-screen</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/vta15-screen.jpg</image:loc>
+      <image:title>Satake VTA15 Vertical Whitener Screen Segments (GM-SCR-VTA15) - GrainMaster Kano</image:title>
+      <image:caption>Extra-capacity vertical abrasive whitener screen engineered for Satake VTA15 and VTA15-AB milling towers, built to withstand extreme friction.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=n110-maize-screen</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/n110-maize-screen.jpg</image:loc>
+      <image:title>N-110 Heavy-Duty Maize Polisher &amp; Degerminator Screen (GM-SCR-N110-MZ) - GrainMaster Kano</image:title>
+      <image:caption>Heavy-duty hexagonal wear screen engineered specifically for N-110 machines processing flint maize, separating bran husk and germ from whole corn kernels.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=nf15b-screen</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/nf15b-screen.jpg</image:loc>
+      <image:title>NF-15B Air-Jet Rice Whitener Screen Segments (GM-SCR-NF15B) - GrainMaster Kano</image:title>
+      <image:caption>Heavy-duty precision whitener screen segment engineered for NF-15B / MNMF-15B horizontal air-jet polishers with upgraded perforation and wear resistance.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=pressure-plates-brake</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/pressure-plates-brake.jpg</image:loc>
+      <image:title>Heavy-Duty Resistance Pressure Plates &amp; Brake Bars (GM-BRK-PLT) - GrainMaster Kano</image:title>
+      <image:caption>Hardened steel resistance brake plates and pressure bars that regulate internal milling chamber pressure for uniform whitening and maximum bran removal.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=elevator-cups-hdpe</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/elevator-cups-hdpe.jpg</image:loc>
+      <image:title>Heavy-Duty HDPE &amp; Nylon Grain Elevator Buckets / Cups (GM-ELV-HDPE) - GrainMaster Kano</image:title>
+      <image:caption>Ultra-durable, high-density polyethylene (HDPE) and virgin nylon elevator cups engineered with thick wear lips for high-capacity vertical grain transport.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=elevator-bolts-nuts</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/elevator-bolts-nuts.jpg</image:loc>
+      <image:title>Elevator Bucket Bolts &amp; Nuts (Fang &amp; Euro Flat Oval Head) (GM-ELV-BLT-SET) - GrainMaster Kano</image:title>
+      <image:caption>High-tensile Grade 8.8 elevator bucket bolts featuring twin-fang or flat oval countersunk heads, complete with large concave washers and self-locking nyloc nuts.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=centrifugal-suction-fan</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/centrifugal-suction-fan.jpg</image:loc>
+      <image:title>Industrial Centrifugal Suction Fan &amp; Husk Aspiration Blower (GM-FAN-BLW-5HP) - GrainMaster Kano</image:title>
+      <image:caption>High-pressure centrifugal aspiration fan engineered for pneumatic evacuation of rice husks, bran powder, and dust into cyclone collectors.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=screw-impeller-auger</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/screw-impeller-auger.jpg</image:loc>
+      <image:title>Heavy-Duty Grain Feeding Screw Impeller &amp; Auger Flights (GM-AUG-SCREW) - GrainMaster Kano</image:title>
+      <image:caption>Continuous cold-rolled steel screw auger flights and intake feeding impellers designed for smooth, jam-free grain metering into milling chambers.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=heavy-duty-bearings</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/heavy-duty-bearings.jpg</image:loc>
+      <image:title>Heavy-Duty Pillow Block Bearings (UCP 208, UCP 210, UCF Series) (GM-BRG-UCP208) - GrainMaster Kano</image:title>
+      <image:caption>Cast-iron mounted pillow block bearings with double-sealed spherical insert bearings built to withstand continuous vibration and dust in milling environments.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=industrial-fasteners</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/industrial-fasteners.jpg</image:loc>
+      <image:title>High-Tensile Industrial Bolts, Nuts &amp; V-Belt Hardware Kit (GM-FST-KIT-88) - GrainMaster Kano</image:title>
+      <image:caption>Comprehensive workshop assortment of Grade 8.8 high-tensile machine bolts, lock washers, nylon locknuts, and shaft keys for rice mill maintenance.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=ye3-motor-20hp</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/ye3-motor-20hp.jpg</image:loc>
+      <image:title>YE3 Premium 20HP (15kW) Normal Speed Electric Motor (GM-MTR-YE3-20HP) - GrainMaster Kano</image:title>
+      <image:caption>Ultra-high efficiency 20HP (15kW) 3-phase induction electric motor at normal 1450 RPM speed, designed for heavy continuous duty on rice mills and polishers.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=ye3-motor-30hp</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/ye3-motor-30hp.jpg</image:loc>
+      <image:title>YE3 Premium 30HP (22kW) Normal Speed Electric Motor (GM-MTR-YE3-30HP) - GrainMaster Kano</image:title>
+      <image:caption>Industrial 30HP (22kW) 3-phase normal speed electric motor engineered for high-demand milling machinery, offering exceptional torque and continuous reliability.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=ye3-motor-40hp</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/ye3-motor-40hp.jpg</image:loc>
+      <image:title>YE3 Premium 40HP (30kW) Normal Speed Electric Motor (GM-MTR-YE3-40HP) - GrainMaster Kano</image:title>
+      <image:caption>Heavy commercial 40HP (30kW) normal speed 3-phase electric motor built for large milling installations, Bühler-type polishers, and high-tonnage processing plants.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=hammer-mill-cyclone</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/hammer-mill-cyclone.jpg</image:loc>
+      <image:title>Heavy-Duty Grain &amp; Maize Hammer Mill with Cyclone Collector (GM-HM-CYC-20HP) - GrainMaster Kano</image:title>
+      <image:caption>Industrial high-speed hammer mill pulverizer fitted with hardened alloy beaters, 360-degree round-hole sieve, and pneumatic cyclone collection system.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=hammer-mill-beaters</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/hammer-mill-beaters.jpg</image:loc>
+      <image:title>Hardened Tungsten Carbide Tipped Hammer Mill Beaters &amp; Screens (GM-HM-BTR-SET) - GrainMaster Kano</image:title>
+      <image:caption>Heat-treated manganese steel hammer blades hardfaced with tungsten carbide on working corners to resist extreme abrasive wear from continuous maize crushing.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grainmasteragro.com/?product=maize-degerminator</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://grainmasteragro.com/assets/images/products/maize-degerminator.jpg</image:loc>
+      <image:title>Commercial Maize Degerminator &amp; Corn Peeling Machine (GM-MZ-DEGERM-15) - GrainMaster Kano</image:title>
+      <image:caption>High-efficiency dry maize degerming and peeling machine that removes the outer bran skin and germ from corn kernels to produce high-purity brewing and meal grits.</image:caption>
+    </image:image>
+  </url>
+</urlset>

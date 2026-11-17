@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
         (item) => `
       <div class="cart-item-card">
         <div class="cart-item-img">
-          <img src="${item.image}" alt="${item.name}" loading="lazy" />
+          <img src="${item.image}" alt="${item.name} - GrainMaster Agro" loading="lazy" decoding="async" width="64" height="64" />
         </div>
         <div class="cart-item-info">
           <h4 class="cart-item-title">${item.name}</h4>
@@ -300,7 +300,7 @@ ${orderItemsText}
         <div class="card-top-badge">${product.badge}</div>
         <div class="card-brand-pill">${product.brand}</div>
         <div class="product-card-img-wrap" onclick="window.appOpenModal('${product.id}')">
-          <img src="${product.image}" alt="${product.name}" loading="lazy" />
+          <img src="${product.image}" alt="${product.name} - GrainMaster Agro Solutions Kano" loading="lazy" decoding="async" width="280" height="200" />
         </div>
         <div class="product-card-body">
           <span class="product-sku">${product.sku}</span>

@@ -1,0 +1,17 @@
+# =========================================================================
+# GrainMaster Agro Solutions Ltd. (RC9167936)
+# Central Hub: GF7, Helu plaza, France rd by Galadima, Kano Nigeria
+# Official Domain: https://grainmasteragro.com/
+# =========================================================================
+
+User-agent: *
+Allow: /
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+
+# Crawl Delay to ensure smooth high-speed indexing
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://grainmasteragro.com/sitemap.xml

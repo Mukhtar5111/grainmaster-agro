@@ -28,6 +28,8 @@ core_files = [
     "index.html",
     "README.md",
     "favicon.ico",
+    "sitemap.xml",
+    "robots.txt",
     os.path.join("assets", "images", "logo.png"),
     os.path.join("assets", "images", "favicon.png"),
     os.path.join("assets", "images", "favicon-32x32.png"),
@@ -56,10 +58,53 @@ required_strings = [
     "productModal",
     "btnModalShareWhatsApp",
     "cartDrawer",
-    "fabContainer"
+    "fabContainer",
+    "faqSection",
+    '<h1 class="hero-title">'
 ]
 for rs in required_strings:
     report(f"HTML Content Verification: contains '{rs}'", rs in html_content)
+
+# SEO Integrity Checks
+import json
+jsonld_match = re.search(r'<script type="application/ld\+json">(.*?)</script>', html_content, re.DOTALL)
+report("SEO Verification: Schema.org JSON-LD tag present", bool(jsonld_match))
+if jsonld_match:
+    try:
+        parsed_jsonld = json.loads(jsonld_match.group(1))
+        report("SEO Verification: Schema.org JSON-LD valid syntax", True)
+        types = [node.get("@type") for node in parsed_jsonld.get("@graph", [])]
+        report("SEO Verification: LocalBusiness in JSON-LD", any("LocalBusiness" in str(t) for t in types))
+        report("SEO Verification: WebSite in JSON-LD", any("WebSite" in str(t) for t in types))
+        report("SEO Verification: FAQPage in JSON-LD", any("FAQPage" in str(t) for t in types))
+    except Exception as e:
+        report("SEO Verification: Schema.org JSON-LD valid syntax", False, str(e))
+
+seo_tags = [
+    '<meta name="robots"',
+    '<link rel="canonical" href="https://grainmasteragro.com/" />',
+    '<link rel="sitemap" type="application/xml"',
+    '<meta property="og:image"',
+    '<meta name="twitter:card"',
+    '<meta name="geo.region" content="NG-KN"',
+    '<meta name="geo.placename" content="Kano, Nigeria"'
+]
+for st in seo_tags:
+    report(f"SEO Meta Tag: contains '{st}'", st in html_content)
+
+# Check sitemap.xml format & count
+with open("sitemap.xml", "r", encoding="utf-8") as f:
+    sitemap_text = f.read()
+loc_count = len(re.findall(r'<loc>', sitemap_text))
+img_count = len(re.findall(r'<image:image>', sitemap_text))
+report("Sitemap: Minimum 40 URLs present", loc_count >= 40, f"Found {loc_count} URLs")
+report("Sitemap: Image tags present for indexing", img_count >= 37, f"Found {img_count} images")
+
+# Check robots.txt
+with open("robots.txt", "r", encoding="utf-8") as f:
+    robots_text = f.read()
+report("Robots.txt: Contains User-agent", "User-agent: *" in robots_text)
+report("Robots.txt: References sitemap.xml", "Sitemap: https://grainmasteragro.com/sitemap.xml" in robots_text)
 
 # Check CSS & JS for WhatsApp Share Features
 with open(os.path.join("assets", "css", "style.css"), "r", encoding="utf-8") as f:
@@ -149,6 +194,13 @@ try:
 
     req_js2 = urllib.request.urlopen(f"{base_url}/assets/js/app.js", timeout=5)
     report("HTTP Probe: GET /assets/js/app.js", req_js2.status == 200, f"Status: {req_js2.status}")
+
+    # Test Sitemap & Robots
+    req_sitemap = urllib.request.urlopen(f"{base_url}/sitemap.xml", timeout=5)
+    report("HTTP Probe: GET /sitemap.xml", req_sitemap.status == 200, f"Status: {req_sitemap.status}, Size: {len(req_sitemap.read()):,} bytes")
+
+    req_robots = urllib.request.urlopen(f"{base_url}/robots.txt", timeout=5)
+    report("HTTP Probe: GET /robots.txt", req_robots.status == 200, f"Status: {req_robots.status}")
 
     # Probe representative images via HTTP
     sample_images = [
