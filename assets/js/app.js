@@ -655,10 +655,37 @@ Please advise on the official price quotation, stock availability at your Kano w
   }
 
   // --- WHATSAPP PRODUCT SHARING SYSTEM ---
+  const productFilesMap = new Map();
+
+  // Prefetch image files into memory so sharing is 100% synchronous with user gesture (no await lag)
+  const preloadProductFiles = () => {
+    const runner = window.requestIdleCallback || ((cb) => setTimeout(cb, 150));
+    runner(() => {
+      PRODUCTS_DATA.forEach(async (product) => {
+        try {
+          const res = await fetch(product.image);
+          if (res.ok) {
+            const blob = await res.blob();
+            const isPng = product.image.toLowerCase().endsWith(".png");
+            const ext = isPng ? "png" : "jpg";
+            const mimeType = isPng ? "image/png" : "image/jpeg";
+            const file = new File([blob], `${product.id}.${ext}`, { type: mimeType });
+            productFilesMap.set(product.id, file);
+          }
+        } catch (e) {
+          // ignore background prefetch error
+        }
+      });
+    });
+  };
+
   const getProductShareText = (product) => {
-    const baseUrl = window.location.origin.includes("grainmasteragro.com")
-      ? "https://grainmasteragro.com"
-      : window.location.origin;
+    let baseUrl = window.location.origin;
+    if (!baseUrl || baseUrl === "null" || baseUrl.startsWith("file:")) {
+      baseUrl = "https://grainmasteragro.com";
+    } else if (baseUrl.includes("grainmasteragro.com")) {
+      baseUrl = "https://grainmasteragro.com";
+    }
     const productUrl = `${baseUrl}/?product=${encodeURIComponent(product.id)}`;
 
     return `🌾 *${product.name}* (${product.sku})
@@ -677,69 +704,76 @@ ${product.shortDesc}
     if (!product) return;
 
     const shareText = getProductShareText(product);
+    const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-    // Fetch the product image as a blob
-    let file = null;
-    let blob = null;
-    try {
-      const response = await fetch(product.image);
-      if (response.ok) {
-        blob = await response.blob();
-        const isPng = product.image.toLowerCase().endsWith(".png");
-        const ext = isPng ? "png" : "jpg";
-        const mimeType = isPng ? "image/png" : "image/jpeg";
-        file = new File([blob], `${product.id}.${ext}`, { type: mimeType });
+    // 1. Check if the physical image file is already cached in memory
+    let file = productFilesMap.get(productId) || null;
+    if (!file) {
+      try {
+        const response = await fetch(product.image);
+        if (response.ok) {
+          const blob = await response.blob();
+          const isPng = product.image.toLowerCase().endsWith(".png");
+          const ext = isPng ? "png" : "jpg";
+          const mimeType = isPng ? "image/png" : "image/jpeg";
+          file = new File([blob], `${product.id}.${ext}`, { type: mimeType });
+          productFilesMap.set(productId, file);
+        }
+      } catch (e) {
+        console.warn("Could not load image file for share:", e);
       }
-    } catch (err) {
-      console.warn("Could not load image file for sharing:", err);
     }
 
-    // 1. Native Mobile Web Share API: Uploads the physical image directly into WhatsApp
+    // 2. Try native Web Share API with image file attached (Mobile Android / iOS Safari)
     if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
       try {
         await navigator.share({
           files: [file],
           text: shareText
         });
+        return; // User completed share or selected app
+      } catch (err) {
+        if (err.name === "AbortError") return; // User simply dismissed share sheet
+        console.warn("Native file share aborted/unsupported, falling back:", err);
+      }
+    }
+
+    // 3. Try standard Web Share without file (e.g. mobile browsers without file share permission)
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: product.name,
+          text: shareText
+        });
         return;
       } catch (err) {
-        if (err.name === "AbortError") return; // User closed share drawer
-        console.warn("Native file share aborted, using web fallback:", err);
+        if (err.name === "AbortError") return;
       }
     }
 
-    // 2. Desktop Fallback (WhatsApp Web):
-    // Copy the image directly to the system clipboard so the user can paste (Ctrl+V) directly into chat
-    if (blob && navigator.clipboard && window.ClipboardItem) {
-      try {
-        const img = new Image();
-        img.src = product.image;
-        await img.decode();
-        const canvas = document.createElement("canvas");
-        canvas.width = img.naturalWidth;
-        canvas.height = img.naturalHeight;
-        const ctx = canvas.getContext("2d");
-        ctx.drawImage(img, 0, 0);
-        canvas.toBlob(async (pngBlob) => {
-          if (pngBlob) {
-            try {
-              await navigator.clipboard.write([
-                new ClipboardItem({ "image/png": pngBlob })
-              ]);
-              showToast("Image copied! Paste (Ctrl+V) into WhatsApp", "fa-clipboard-check");
-            } catch (clipErr) {
-              console.warn("Clipboard write failed:", clipErr);
-            }
-          }
-        }, "image/png");
-      } catch (err) {
-        console.warn("Canvas clipboard processing skipped:", err);
+    // 4. Direct WhatsApp protocol routing (Instant Native WhatsApp on mobile, Web on desktop)
+    const encodedText = encodeURIComponent(shareText);
+    if (isMobile) {
+      // Launch WhatsApp mobile app directly
+      window.location.href = `whatsapp://send?text=${encodedText}`;
+      // Fallback in case native protocol is not caught
+      setTimeout(() => {
+        window.open(`https://api.whatsapp.com/send?text=${encodedText}`, "_blank");
+      }, 700);
+    } else {
+      // Desktop: Open WhatsApp Web
+      const waUrl = `https://web.whatsapp.com/send?text=${encodedText}`;
+      const opened = window.open(waUrl, "_blank");
+      if (!opened) {
+        window.location.href = `https://api.whatsapp.com/send?text=${encodedText}`;
+      }
+      // Copy to clipboard as convenient backup
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(shareText).then(() => {
+          showToast("Product details copied to clipboard!", "fa-clipboard-check");
+        }).catch(() => {});
       }
     }
-
-    // Direct WhatsApp share URL with concise text & product link
-    const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
-    window.open(waUrl, "_blank");
   };
 
   window.appShareToWhatsApp = shareProductToWhatsApp;
@@ -792,10 +826,22 @@ ${product.shortDesc}
     }
   });
 
+  // Responsive search placeholder
+  const updateSearchPlaceholder = () => {
+    if (headerSearchInput) {
+      headerSearchInput.placeholder = window.innerWidth <= 640 
+        ? "Search equipment & spares..." 
+        : "Search grain machines, screens, rubber rollers, color sorter spares...";
+    }
+  };
+  updateSearchPlaceholder();
+  window.addEventListener("resize", updateSearchPlaceholder);
+
   // INITIALIZATION
   updateCartUI();
   populateHorizontalTracks();
   setupScrollButtons();
   renderFilteredProducts();
   checkUrlForProduct();
+  preloadProductFiles();
 });

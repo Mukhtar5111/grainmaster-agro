@@ -55,6 +55,9 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 body {
@@ -63,6 +66,8 @@ body {
   color: var(--slate-800);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -2074,23 +2079,36 @@ button {
     display: none; /* Relocated to floating thumb button on mobile */
   }
 
+  /* Prevent iOS automatic zoom on text inputs */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+  .search-input-wrapper input {
+    font-size: 16px !important;
+  }
+
   /* Category Navigation Strip on Mobile */
   .category-navbar {
-    padding: 0.3rem 0;
+    padding: 0.35rem 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
-  .cat-tabs-track {
+  .category-navbar::-webkit-scrollbar {
+    display: none;
+  }
+  .category-nav-list {
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x proximity;
-    padding: 0.25rem 0.25rem;
+    padding: 0.15rem 0.25rem;
     gap: 0.4rem;
     scrollbar-width: none;
   }
-  .cat-tabs-track::-webkit-scrollbar {
+  .category-nav-list::-webkit-scrollbar {
     display: none;
   }
   .cat-tab-btn {
-    padding: 0.3rem 0.75rem;
-    font-size: 0.76rem;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.78rem;
     gap: 0.35rem;
     white-space: nowrap;
     scroll-snap-align: center;
@@ -2393,7 +2411,12 @@ button {
     font-size: 1.2rem;
     box-shadow: 0 6px 18px rgba(15, 81, 50, 0.45);
     z-index: 2400;
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    transition: transform var(--transition-fast), opacity var(--transition-fast), box-shadow var(--transition-fast);
+  }
+  .fab-container.active + .mobile-floating-cart-btn {
+    opacity: 0.2;
+    pointer-events: none;
+    transform: scale(0.8);
   }
   .mobile-floating-cart-btn:active {
     transform: scale(0.92);
